@@ -1,0 +1,2961 @@
+What are XPath Axes?
+Answer: An XPath axes define the node-set relative to the current (context) node. It is used to locate the node that is relative to the node on that tree.
+
+
+
+Hashset and Map 
+
+Collections: Collections is a utility class present in java.util.package. 
+It defines several utility methods like sorting and searching which is used to operate on collection. It has all static methods. These methods provide much-needed convenience to developers, allowing them to effectively work with Collection Framework. For example, It has a method sort() to sort the collection elements according to default sorting order, and it has a method min(), and max() to find the minimum and maximum value respectively in the collection elements.
+
+Collection: Collection is a interface present in java.util.package. 
+It is used to represent a group of individual objects as a single unit.
+It is similar to the container in the C++ language. The collection is considered as the root interface of the collection framework. It provides several classes and interfaces to represent a group of individual objects as a single unit. 
+The List, Set, and Queue are the main sub-interfaces of the collection interface. The map interface is also part of the java collection framework, but it doesn’t inherit the collection of the interface. The add(), remove(), clear(), size(), and contains() are the important methods of the Collection interface.
+finalize...
+
+iFrame..
+driver.get("https://google.com");
+driver.switchTo().frame("courses-iframe");
+driver.findElement(By.id("search-courses")).sendKeys("java");
+driver.switchTo().defaultContent();
+_______________________________
+<iframe src="URL"></iframe>
+An iframe is a space on the web page that embeds different kinds of 
+media like images, documents, videos inside the main web page. 
+The media can be internal images or documents related to the website or external sources from other websites. 
+The full form of the iframe is Inline Frame and is defined using <iframe> tag in HTML.
+
+
+//Navigate to the demo site
+                driver.get("https://demoqa.com/nestedframes");
+                
+                //Number of Frames on a Page
+                int countIframesInPage = driver.findElements(By.tagName("iframe")).size();
+                System.out.println("Number of Frames on a Page:" + countIframesInPage);
+                
+                //Locate the frame1 on the webPage
+                WebElement frame1=driver.findElement(By.id("frame1"));
+                
+                //Switch to Frame1
+                driver.switchTo().frame(frame1);
+                
+                //Locate the Element inside the Frame1
+                WebElement frame1Element= driver.findElement(By.tagName("body"));
+                
+                //Get the text for frame1 element
+                String frame1Text=frame1Element.getText();
+                System.out.println("Frame1 is :"+frame1Text);
+                
+                //Number of Frames on a Frame1
+                int countIframesInFrame1 =driver.findElements(By.tagName("iframe")).size();
+                System.out.println("Number of iFrames inside the Frame1:" + countIframesInFrame1);
+                
+                //switch to child frame
+                driver.switchTo().frame(0);
+
+_________________________
+frames  in an HTML document looks as follows:
+Frames are the HTML tags that divide the browser's wind
+ow into multiple parts, where each part can load a separate HTML document.
+<frameset rows="25%,25%",50%,50%>
+
+ <frame name="frame1" src="frame_1.html" />
+ <frame name="frame2" src="frame_2.html" />
+ <frame name="frame2" src="frame_3.html" />
+ <frame name="frame2" src="frame_4.html" />
+
+</frameset>
+_______________________________
+IFrames
+
+In contrast, iframes, as already explained, are inline frames used to embed content from internal/external websites 
+and denoted by the <iframe> tag. 
+Unlike frames, these do not need a frameset tag  and can be placed anywhere on the web page in a region inside
+the <body> tag.
+
+
+________________________________
+
+clone and copyto in array difference...
+Both CopyTo () and Clone () make shallow copy (data is copied) and used for Single Dimension arrays.
+ Clone () method makes a clone of the original array. It returns an exact length array. 
+CopyTo () copies the elements from the original array to the destination array starting at the specified destination array index.Topics 
+
+typescript
+
+Topics:
+1. Screenshot
+2. Logs
+3. Reporting
+4. Test cases
+5. Grouping of test methods
+6. Reading test data like excel and xml
+7. Database testing
+8. API testing using httpclient
+9. Parallel execution of test methods.
+10. Xpath**
+
+
+
+
+
+sitescript
+Angular dev 10
+axion lab
+
+finalize...???
+collection/collections?
+
+protactor
+
+*************Setup parallell execution 
+
+
+NUNIT, XUNIT difference..
+xUnit framework provides much better isolation of tests in comparison to NUnit and MSTest frameworks. 
+ For each test case, the test class is instantiated, executed, and is discarded after the execution. This ensures that the tests can be executed in any order as there is reduced/no dependency between the tests. Executing each test as a separate instance minimizes the chances of one test causing the other tests to fail!
+
+XUnit-Introduction of the [Theory] attribute for parameterized tests is one of the prime examples of the extensibility of the framework. This also makes the implementation of custom functionality much easier in the xUnit framework.
+Initialization and De-initialization: xUnit starts a new instance per test, whereas, in NUnit & MSTest frameworks, all the tests execute in the same Fixture/Class.
+
+resolve stale element ....
+
+initialization and De-initialization
+
+
+Headless browser
+
+
+The xUnit framework is more sophisticated as it is more community-focused, and the creators had immense learning while building the NUnit framework.
+
+
+[Parallelizable(ParallelScope.Children)]
+[Parallelizable(ParallelScope.Fixtures)]
+[Parallelizable(ParallelScope.Self)]
+[Parallelizable(ParallelScope.All)]
+
+ Parallel.ForEach(testCaseToExecute,
+                                     new ParallelOptions { MaxDegreeOfParallelism = maxDegree },
+                                     work =>
+                                     {
+                                         ProcessEachWork(work);
+                                     });
+
+
+map?
+
+webservice request
+
+project file:
+
+
+https://stackoverflow.com/questions/70175202/selenium-how-to-get-text-out-of-a-div
+
+
+ut[@aria-label='Browse-file']
+driver.findElement(By.Xpath("//span[@class='input-group-btn']")).Click();
+
+SendKeys.SendWait(@"C:\temp\file.txt");
+SendKeys.SendWait(@"{Enter}");
+
+String script = "document.getElementById('fileName').value='" + "C:\\\\temp\\\\file.txt" + "';";
+((IJavaScriptExecutor)driver).ExecuteScript(script);
+
+IWebElement ele = driver.FindElement(By.XPath("//span[@class='input-group-btn']"));
+                ele.SendKeys("C:\\Users\\H_7\\Desktop\\interview question.txt");
+ 
+public bool CheckIfObjectExists(By lookupBy, int maxWaitTime = 30)
+        {
+            IWebElement element = null;
+            try
+            {                
+                element = WaitForElementVisible(lookupBy, maxWaitTime);
+                if (element != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS);
+
+ 
+string text = driver.findelemnt(//div[@class='alert alert-block alert-success']//h4).Gettext
+if(text ==text) 
+getAttribute("text");
+//*[@id="body-container"]/div/div/section/div[2]/text()[3]s
+
+Implicit wait : driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+
+ 
+
+how to initialize webelements at POM page...
+how to navigate between pages, how to run test method in sequence?
+1
+https://github.com/Ashwini123a/Company.Product.git
+
+
+contains() in Selenium is a function within Xpath expression which is used to search for the web elements that contain a particular text.
+
+Difference between action class click and webelement click...?
+
+
+
+149,858 + 16,917 +720000/12 = 226,775
+
+ ChromeDriver binary. "C:\\Users\\apasham\\.nuget\\packages\\microsoft.testplatform.testhost\\16.5.0\\build\\netcoreapp2.1\\x64"
+
+
+
+chromedriver.exe path:
+C:\Users\apasham\AP\Ashwini_P\Training\Testing\Projects\POM-Framework-Project\Deloitte.GPS.Tests\bin\Debug\netcoreapp3.1
+C:\Users\apasham\AP\Ashwini_P\Training\Testing\Projects\POM-Framework-Project\Deloitte-GPS-Tests\Deloitte.GPS.Automation.Repository\bin\Debug\netcoreapp3.1
+
+Cigniti Interview Questions
+Q1. 1. Explain current project framework
+Add Answer
+Q2. 2. WAP to reverse a string using while loop.
+
+Add Answer
+Q3. 3. WAP to print all the alphabets only from the below string - I/p: "selenium 123java456", o/p: "seleniumjava"
+Add Answer
+Q4. 4. Cucumber hooks and background
+Here at Cigniti, we ask our test engineers to follow specific QA protocols. What role do you feel QA plays in software development and testing?
+ QA's importance in reducing errors, maintaining specifications, testing failure parameters and preventing defects from occurring. In the end, make sure that quality is your mantra in the eyes of your interviewer 
+by giving an example or two of how you put QA in the forefront of your work.
+
+OData is a web based protocol that defines a set of best practices 
+for building and consuming RESTful web services.
+Open Data Protocol
+
+consuming RESTful web services using ODAta in C#-->
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v3/calling-an-odata-service-from-a-net-client
+   WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromMilliseconds(3000));
+                if (wait.Until(ExpectedConditions.AlertIsPresent()) == null)
+                    return false;
+                else
+                    return true;
+run c# code  
+https://dotnetfiddle.net/3
+
+How does Appium driver work? Appium.WebDriver.1.5.1.1
+Appium is an open source test automation framework for use with native, hybrid and mobile web apps. It drives iOS, Android, and Windows apps 
+Support for the automation of a particular platform is provided by an Appium "driver".
+The Appium Server receives requests from Appium client libraries via the JSON Wire Protocol and invokes the mobile driver (Android driver/iOS driver) to connect to the corresponding native testing automation frameworks to run client operations on the devices. The test results are then received and sent to the clients.
+Does Appium use WebDriver?
+Basically, Appium derives its roots from Selenium and it uses JSONWireProtocol internally to interact with iOS and Android apps using Selenium's WebDriver. In its architecture, Appium is an HTTP server written in Node. js that creates and handles multiple WebDriver sessions.
+
+Json schema....to validate json
+JSON Schema is used to describe the structure and validation constraints of JSON documents.
+
+implicit wait is done at driver --> 5 sec
+explicit wait is at client  --> 11sec
+total will be 15 seconds ??? server sends request to client and the wait is considered and in total 15 sec....
+implicit wait is at driver; explicit wait at client...
+
+
+At Cigniti, we take security risks very importantly in our products. In your experience, what are the biggest security risks in software and what is your experience in any prevention methods?
+there are six overarching areas that should be covered during security testing. These include confidentiality, integrity, authentication, authorisation, availability, and non-repudiation
+The Open Web Application Security Project (OWASP) is an international organization for enhancing the security of web applications. The top 10 web application security risks worldwide are:
+
+Injection
+Broken authentication and session management
+Cross-site scripting
+Indirect object security reference
+Security misconfiguration
+In the second part of this series, we will cover the following web application security testing parameters:
+
+Sensitive data exposure
+Missing function level access control
+Cross-site forgery
+Using components with known vulnerabilities: Heartbleed and Shellshock
+Unvalidated redirects and forwards
+
+Coonatainer, slenoid...
+docker... jenkins..
+alum report..
+soap client...
+
+
+6.What software development tools have you used?
+C# Selenium framwork
+POM design patter
+NUnit framework
+Appium Framework
+OData
+
+What is GeckoDriver Selenium?
+GeckoDriver serves as a proxy between WebDriver enabled clients and the Firefox browser. In other words, GeckoDriver is a link between Selenium tests and the Firefox browser. It is a proxy for using W3C WebDriver-compatible clients that lets them interact with Gecko-based browsers.
+
+
+When do you consider a project to be finished?
+
+Do you have experience working with different CASE tools? If so, what do you have experience with???
+
+We are looking for innovators to join us here at Cigniti. Where have you brought innovation in automation to a process in your career?
+
+
+If you were confronted with a time where you wouldn't be able to meet a deadline here at Cigniti, what steps would you take when you made that realization?
+
+Here at Cigniti, we subscribe to the domain-driven design approach for our customers. If hired for this role, what will you do in your first 90 days on the job to ensure you can sustain in this job with that approach?
+
+
+What experience do you have in the different types of software maintenance?14.What is one unique personality trait you possess that would help you be successful in this role with Cigniti?15.Talk about a time when things didn't go as planned on the job. What was the situation and what allowed your to persevere in that situation?
+What would you say is your top non-technical skill that will help you succeed in this role here at Cigniti?17.What programming languages would you consider yourself fluent in?18.Would you say that you are a goal oriented on the job? What would I be able to do as your manager to help you achieve your goals if hired here at Cigniti?19.How do you stay organized and on track when working on multiple projects or duties at the same time?20.What software analysis and design tools do you have familiarity working with?21.What do you consider to be a good litmus test for when you would automate a test process for a new system versus testing manually?22.Tell me about a time your manager changed the scope of the project in the middle of it. How did you deal with it?23.Do you have any unique skills or past work experiences that we can't see on your resume that would benefit the team here at Cigniti?24.How would you handle a situation where a colleague was being very difficult to work with?25.Tell me about your problem-solving skills. Do you enjoy analyzing and solving complex problems?26.What do you know about our products and how do you think you'll be able to handle a support role surrounding them?27.What SDLC models are you familiar in working with?28.This role with Cigniti is highly technical. What is your understanding of this position and the responsibilities that come with it?
+
+Cigniti Automation Interview Questions
+Explain exception handling and types of exceptions.
+How will you handle checked and unchecked exceptions.
+What is the use of try block and throws keyword.
+What is the difference b/w throw and throws.
+What do throws do?
+When we use a throw keyword and why?
+
+
+Tell me about yourself?
+Explain your recent project?
+
+What is the difference between smoke and sanity testing?
+What is a web service?
+Smoke testing is done in the initial stages of the SDLC and sanity and regression tests are usually run in the final stages. Based on time availability and requirement, the QA team must always start with smoke testing, followed by sanity and then regression tests.
+Initial buils where software is unstable, is where smoke testing is done
+Smoke Testing is done whenever the new functionalities of the software are developed and integrated with an existing build that is deployed in a QA/staging environment. 
+It ensures that all critical functionalities are working correctly. In this testing method, the development team deploys the build in the QA.
+ It is often called a “Day 0” check
+Smoke Testing is done by both developers or testers whereas Sanity Testing is done by testers.
+Smoke testing is a subset of Acceptance testing
+QA team determines the major functionality in the application to perform smoke testing. QA team checks for showstoppers in the application that is under testing.
+Smoke testing verifies the entire system from end to end whereas Sanity Testing verifies only a particular component.
+
+What is Sanity Testing? Sanity Testing is a type of software testing which is conducted after receiving a software build, with minor changes in the code, or functionality.
+The goal is to determine that the proposed functionality works roughly as expected.
+Relatively stable build after multiple rounds of regression testing is sanity testing...verifies new functionality bug fixes...
+
+Alpha testing is predominantly about ensuring bug-free functionality. 
+Beta testing involves releasing the software to a limited number of real users.
+ Both these are forms of acceptance testing.
+Beta testing:the users are encouraged to give feedback about how the application performs. Usually, you will also monitor how the backend is performing during these tests. 
+Beta testing is more focussed on performance and scalability.
+
+_____________________________
+What is the difference between regression testing and retesting?
+Regression testing is about searching for defects, whereas retesting is about fixing specific defects that you've already found.
+
+Regression Testing is defined as a type of software testing to confirm that a recent program or code change has not adversely affected existing features. 
+Regression Testing is nothing but a full or partial selection of already executed test cases 
+which are re-executed to ensure existing functionalities work fine.
+
+This testing is done to make sure that new code changes should not have side effects on the existing functionalities. It ensures that the old code still works once the latest code changes are done.
+
+
+What is API testing?
+API testing is a type of software testing that analyzes an application program interface (API) to verify it fulfills its expected functionality, security, performance and reliability
+
+Severity is “the degree of impact that a defect has on the development or operation of a component or system.” Priority is “the level of (business) importance assigned to an item, 
+
+
+
+
+What is API testing?
+Image result
+API testing is a type of software testing that analyzes an application program interface (API) to verify it fulfills its expected functionality, security, performance and reliability
+
+Have you ever tested rest web services?
+Why do we have to use soap ui?
+
+What is bug leakage?
+A defect which exists during testing yet unfound by the tester which is eventually found by 
+the tester/end-user is also called bug leakage.
+When test engineer find any error in the application they called it as bug. Bug is informal name to Defect which is flaws or misatkes in the Code or Design.
+A bug release is when a particular version of s/w is released with a set of known bug(s)/defect(s). These bugs are usually low severity and/or low priority bugs.
+
+
+What are the assertions used in soap ui?
+What is the difference between soap and rest?
+When to use REST?
+Limited resources and bandwidth –Statelessness Caching  Ease of coding 
+Challenges in REST API
+Lack of Security – REST does not impose any sort of security like SOAP. This is why REST is very appropriate for public available URL’s, but when it comes down to confidential data being passed between the client and the server, REST is the worst mechanism to be used for web services.
+Lack of state – Most web applications require a stateful mechanism. For example, if you had a purchasing site which had the mechanism of having a shopping cart, it is required to know the number of items in the shopping cart before the actual purchase is made. Unfortunately, the burden of maintaining this state lies with the client, which just makes the client application heavier and difficult to maintain.
+
+ReadyAPI..
+
+What is WSDL?
+
+
+
+
+
+What is the difference between xml and html?
+What is schema?
+What is the endpoint?
+Write the test cases for notepad?
+est Scenarios of Notepad
+Verify that on launching the notepad application, the notepad editor should open with its default size.
+
+55, 60...
+
+10198286
+
+verify that users can write/type alphabets from a standard keyboard.
+Verify that the user can type numerics from a standard keyboard.
+-----
+
+Write the query to select the second highest salary from the given table?
+Explain about agile?
+What is rest?
+What is the difference between XPath and contains?
+Explain exception handling and types of exceptions
+How will you handle checked and unchecked exceptions
+What is the use of try block and throws keyword
+What is the difference b/w throw and throws
+What do throws do?
+When we use a throw keyword and why?
+Examples for compile-time and runtime exceptions and why they called like so?
+What are the resources used in exception handling?
+Can we use another try inside try?
+Can we write to try with only finally without the catch?
+What is the purpose of finally in exception handling?
+What kind of code we should use finally block and why to use it?
+When do we get null pointer exception?
+Can we catch multiple exceptions in the catch block?
+.What is heap area?
+What are the method area and stack area?
+What is stackframe and what happens in that area?
+What is a thread?
+What is hashmap an ArrayList?
+What happens in hashmap if enter duplicates?
+Explain method overloading and overriding concepts
+Where did you use method overriding in your project?
+Tell me about your daily activities in your project?
+Which jars did we use for reading excel files?
+What is pom and how will create the driver in pom?
+Have u worked on any framework development side?
+What is the use of TestNG?
+Write the order of annotations in TestNG?
+Why we use a selenium grid? how will start hub and nodes?
+What is cross-platform testing and cross-browser testing
+Explain different types of waits.
+Superclass of all classes?
+
+https://intellipaat.com/blog/interview-question/manual-testing-interview-questions/
+1. What do you understand by software testing?
+Q2. When should you stop the testing process?
+Q3. What do verification and validation mean in software testing?
+Q4. What is static testing? When does it start and what does it cover?
+Q5. Define Black-box testing.
+Q6. What is a test plan and what does it include?
+Q7. What is meant by test coverage?
+Q8. Is it possible to achieve 100% testing coverage? How would you ensure it?
+Q9. What are unit testing and integration testing?
+Q10. Can we do system testing at any stage?
+Q1. Compare Software Testing Vs. Debugging
+Q2. Explain Monkey testing.
+Q3. What is the difference between baseline and benchmark testing?
+Q4. Explain bug life cycle.
+Q5. How can we perform Spike testing in JMeter?
+Q6. What is Silk Test?
+Q7. Define Requirements Traceability Matrix.
+Q8. What is elementary process?
+Q9. Highlight the role of QA in project development.
+Q10. What are the tools of performance testing?
+
+Following are the categories into which the Software Testing Interview Questions blog is categorized:
+1. Basic
+
+2. Intermediate
+
+Basic Interview Questions
+1. Compare Software Testing Vs. Debugging
+Criteria	Software testing	Debugging
+Process	Known conditions, predefined methods and expected outcome	Unknown conditions, not preset method and unpredictable outcome
+Prerequisite	No need of design knowledge	Need full design knowledge
+Goal	Finding error or bug	Finding a cause for the error or bug
+Check out this video on Software Testing Interview Questions:
+×
+
+
+2. Explain Monkey testing.
+A technique of software testing where the application is tested by ingesting inputs randomly. This test does not follow any pre-defined set of rules. It is carried out to check the behavior of the application.
+
+3. What is the difference between baseline and benchmark testing?
+While Baseline testing runs a set of tests to determine the performance, Benchmark testing compares the application performance with industry standards. Baseline testing strives to improve performance with the help of collected information, on the other hand, benchmark testing seeks to improve application performance by matching it with benchmarks.
+
+Certification in Full Stack Web Development
+
+4. Explain bug life cycle.
+When a tester finds a bug, the bug is assigned NEW or OPEN with status.
+The bug is assigned to Development Project Managers who will analyze the bug. They will check whether it is a valid defect. If not valid, the bug is rejected, and its new status is REJECTED.
+Now, the tester checks whether a similar defect was raised earlier. If yes, the defect is assigned a status ‘DUPLICATE’
+Once the bug is fixed, the defect is assigned a status ‘FIXED’
+Next, the tester will re-test the code. In case, the test case passes, the defect is CLOSED
+If the test case fails again, the bug is RE-OPENED and assigned to the developer.
+Preparing for a job interview? Check out our blog on Manual Testing Interview Questions!
+
+5. How can we perform Spike testing in JMeter?
+JMeter comes with a synchronizing timer which can handle the requests of multiple threads. It is able to get the required number of threads and release them at once to cause a spike.
+
+Intermediate Interview Questions
+6. What is Silk Test?
+Silk Test is a tool developed for performing regression and functionality testing of the application. Silk Test is a tool, used when we are testing the applications based on Windows, Java, Web or traditional client/server. Silk Test helps in preparing the test plan and managing of those test plans to provide direct access to the database and field validation.
+
+7. Define Requirements Traceability Matrix.
+The Requirement Traceability Matrix (RTM) is a bi-directional matrix that captures the details of requirements and their traceability. Created at the initial steps of a project, RTM tracks the requirement by analyzing the deliverables and business requirements
+
+Check out our blog to learn about Types of Software Testing!
+
+8. What is elementary process?
+Software applications are made up of several elementary processes. There are two types of elementary processes:
+Dynamic elementary Process: The dynamic elementary involves the process of moving data from one location to another. The location can be either within the application or outside it.
+Static elementary Process: It involves maintaining the data of the application.
+
+Youtube subscribe
+9. Highlight the role of QA in project development.
+QA plays a crucial role in project development. Some of them are outlined here-
+
+Reduce the defects and errors
+Preventing defects from occurring
+Maintain the system quality as per the specifications
+Test the projects on failure parameters to check its fault tolerance
+Click here to learn more about software testing, in this online Software Testing Course.
+
+list box
+dri
+verify... assert...
+defect life cycle...
+OPEN / NEW: Defect is identified via a review or a test and reported. This is the beginning of a defect’s journey.
+ASSIGNED: The defect is assigned to a person who is tasked with its analysis or resolution.
+DUPLICATE: If the defect is invalid because it’s a duplicate of another one already reported, it is marked as a duplicate.
+DROPPED / REJECTED: If the defect is invalid because of various other reasons like false positiv
+New - Potential defect that is raised and yet to be validated.
+Assigned - Assigned against a development team to address it but not yet resolved.
+Active - The Defect is being addressed by the developer and investigation is under progress. At this stage there are two possible outcomes; viz - Deferred or Rejected.
+Test - The Defect is fixed and ready for testing.
+Defect life cycle, also known as Bug Life cycle is the journey of a defect cycle, which a defect goes through during its lifetime. I
+
+
+
+
+get least amount on search...
+
+
+Become a Full Stack Web Developer
+
+10. What are the tools of performance testing?
+LoadRunner(HP): This testing tool contains a wide array of application environments, platforms, and databases. It is typically suitable for web applications and others.
+QA load(Compuware): This tool is used for load testing of web, database, and char-based systems.
+WebLoad(RadView): It is used to compare running tests with test metrics.
+Rational Performance Tester (IBM): It allows finding out the presence and cause of bottlenecks.
+Silk Performer (Borland): This testing tool lets you predict the behavior of e-business environment.
+Explain the concepts of Test Fusion Report of QTP.
+Test Fusion report displays different aspects of the test run, soon after the tester runs a test. The Test Fusion report is used to display all the aspects of test run, it specifies where the application failures occurred, the test data used, and the detailed explanation of every checkpoint stating pass or failure and the application screenshots of every step by highlighting the discrepancies.
+Test Fusion Report is a compilation of the entire testing process. It includes an overview of where the failures occurred, the test data that was used in testing, screenshots to support inconsistencies and a detailed view of checkpoints.
+Top Selenium Interview Questions and Answers
+Selenium is an open-source tool used for automation testing, which allows you to test web applications across a range of browsers. It was introduced once manual testing started to pose several challenges, and there was a high demand for a method that automates the testing process. This Selenium Java interview questions blog has a compiled list of most of the questions that are asked during Selenium job interviews. The most-asked Selenium interview questions for experienced and freshers are mentioned below:
+
+Q1. What is automation testing?
+Q2. Is Selenium 2.0 different from Selenium 3.0? If so, how?
+Q3. Mention some of the popular tools used for automation testing.
+Q4. What is a locator? How will you locate an element in Selenium?
+Q5. What are the test types supported by Selenium?
+Q6. What is XPath?
+Q7. Explain the difference between the single slash and double slash in XPath.
+Q8. Why should you use Selenium for test automation?
+Q9. Does Selenium have any technical limitations? If so, what are those limitations?
+Q10. What is an object repository?
+
+Below are the three major parts that this Selenium interview questions blog is divided into:
+1. Basic Interview Questions
+
+2. Intermediate Interview Questions
+
+3. Advanced Interview Questions
+ 
+
+Youtube subscribe
+
+
+https://intellipaat.com/blog/interview-question/selenium-interview-questions/
+Basic Selenium Interview Questions for Freshers
+1. What is automation testing?
+Automation testing is the process of automating the manual testing of the application under test (AUT) or the system under test (SUT). It includes the involvement of testing tools that help us create test scripts, which can be used repeatedly without any human intervention.
+
+Know more about the Difference between Automation Testing and Manual Testing from our blog.
+
+2. Is Selenium 2.0 different from Selenium 3.0? If so, how?
+Selenium RC is called Selenium 2.0, and the integration of Selenium RC and WebDriver as a single tool has formed Selenium 3.0.
+
+3. Mention some of the popular tools used for automation testing.
+Selenium
+Rational Robot
+HP Unified Functional Testing (UFT)
+IBM Rational Functional Tester
+4. What is a locator? How can you find elements in Selenium?
+Selenium uses locators to find and match the elements of a web page that it needs to interact with. There are different types of Selenium locators to identify various web elements on a web page:
+
+Selenium Locator
+ID
+Name
+Class
+Partial Link
+XPath
+CSS Selector
+Link Text
+5. What are the test types supported by Selenium?
+For testing web-based applications, Selenium can be used.
+
+The test types supported by Selenium are:
+
+Functional testing: It verifies if each function of a software application performs in accordance with specific requirements. This testing primarily involves black-box testing, and it is not concerned about the source code of the application.
+Functional Testing
+Regression testing: It is nothing but a full or partial selection of the already executed test cases to be re-executed to ensure whether the existing functionalities work fine.
+Regression Testing
+Learn more about Selenium from this insightful blog on How would you test Web Applications using Selenium?
+Get 100% Hike!
+Master Most in Demand Skills Now !
+velocity
+Email Address
+stale element handling....
+
++91  IN          INDIA
+Phone Number
+
+???? * in XPath
+6. What is XPath?
+While DOM is the recognized standard way for navigating through an HTML element tree,
+XPath is the navigation tool used to locate a web element based on its XML path.
+--> Basic format of Xpath
+Xpath=//tagname[@attribute='Value']
+Xpath=//input[@type='text']				
+Xpath=//label[@id='message23']
+Xpath=//input[@value='RESET']
+Xpath=//*[@class='barone']
+Xpath=//a[@href='http://demo.guru99.com/']
+Xpath= //img[@src='//guru99.com/images/home/java.png']
+
+contains 
+Complete value of ‘name’ is ‘btnLogin’ but using only partial value ‘btn’.
+Xpath=//*[contains(@name,'btn')]
+
+Using OR & AND:
+Xpath=//*[@type='submit' or @name='btnReset']
+Xpath=//input[@type='submit' and @name='btnLogin']
+
+XPath starts-with() is a function used for finding the web element whose attribute value gets changed on refresh
+or by other dynamic operations on the webpage. In this method, the starting text of the attribute is matched to find the element whose attribute value changes dynamically. You can also find elements whose attribute value is static (not changes).
+Xpath=//label[starts-with(@id,'message')]
+
+39. What are XPath Axes?
+XPath axes are used to search for the multiple nodes in the XML document from the context (current) node.
+
+XPath axes are used to find dynamic elements that would otherwise be impossible using standard locators.
+
+40. What is a Context Node?
+The context node is the node the XPath processor is currently looking at.
+xpath axes...parent..
+Different XPath Axes Used In Selenium Testing
+There are thirteen different axes that are listed below
+. However, we’re not going to use all of them during Selenium testing.
+
+ancestor: These axes indicate all the ancestors relative to the context node, also reaching up to the root node.
+Xpath=//*[text()='Enterprise Testing']//ancestor::div
+Xpath=//*[text()='Enterprise Testing']//ancestor::div[1]
+
+ancestor-or-self: This one indicates the context node and all the ancestors relative to the context node, and includes the root node.
+attribute: This indicates the attributes of the context node. It can be represented with the “@” symbol.
+child: This indicates the children of the context node.
+Xpath=//*[@id='java_technologies']//child::li
+
+descendent: This indicates the children, grandchildren, and their children (if any) of the context node. This does NOT indicate the Attribute and Namespace.
+descendent-or-self: This indicates the context node and the children, and grandchildren and their children (if any) of the context node. This does NOT indicate the attribute and namespace.
+following: This indicates all the nodes that appear after the context node in the HTML DOM structure. This does NOT indicate descendent, attribute, and namespace.
+Xpath=//*[@type='text']//following::input
+Xpath=//*[@type='text']//following::input[1]
+following-sibling: This one indicates all the sibling nodes (same parent as the context node) that appear after the context node in the HTML DOM structure. This does NOT indicate descendent, attribute, and namespace.
+namespace: This indicates all the namespace nodes of the context node.
+parent: This indicates the parent of the context node.
+preceding: This indicates all the nodes that appear before the context node in the HTML DOM structure. This does NOT indicate descendent, attribute, and namespace.
+preceding-sibling: This one indicates all the sibling nodes (same parent as context node) that appear before the context node in the HTML DOM structure. This does NOT indicate descendent, attribute, and namespace.
+self: This one indicates the context node.
+
+
+
+
+XML stands for ‘Extensible Markup Language’ and is used to store, organize, and transport arbitrary data. It stores data in a key–value pair that is very much similar to HTML tags. Both being markup languages and falling under the same umbrella, XPath can be used to locate HTML elements.
+The fundamental concept behind locating elements using XPath is traversing between various elements across the entire page and thus enabling a user to find an element with the reference of another element.
+
+7. Explain the difference between single slash and double slash in XPath.
+Single slash (/): Single slash is used to create an XPath with an absolute path. In this case, the XPath would start selection from the document’s start node.
+Double slash (//): Double slash is used to create an XPath with a relative path. In this case, the XPath would start selection from anywhere within the document.
+8. Why should you use Selenium for test automation?
+Selenium should be used for test automation as it:
+
+Is a free and open-source tool
+Has a large user base and community support
+Has cross-browser compatibility (Firefox, Chrome, Internet Explorer, Safari, etc.)
+Has great platform compatibility (Windows, Mac OS, Linux, etc.)
+Supports multiple programming languages (Java, C#, Ruby, Python, Perl, etc.)
+Has fresh and regular repository developments
+Supports distributed testing
+Become a Test Architect
+
+9. Does Selenium have any technical limitations? If so, what are those limitations?
+Yes, Selenium has a few limitations:
+
+Testing of only web applications is possible using Selenium.
+Testing of mobile applications or desktop applications is not possible.
+Captcha and barcode readers cannot be tested using Selenium.
+A third-party tool like TestNG or JUnit should be used to generate reports.
+As Selenium is a free tool, there is no ready vendor support through which users can find various helping communities.
+Prior programming language knowledge is expected from users.
+Enroll today in our Selenium Course to know more about Selenium!
+
+10. What is an object repository?
+An object repository allows testers to accumulate web elements of the application under test (AUT), along with their locator values, in one or more centralized locations as restricted to hard-coding them within the test scripts.
+
+Object Repository
+11. What is the difference between type keys and type commands?
+TypeKeys() will trigger JavaScript events, while type() won’t. TypesKeys collects different value attributes using JavaScript. Whereas, the type commands imitate an actual user typing.
+
+12. What are the advantages of Selenium?
+Selenium is a purely open-source and portable automation testing tool.
+It supports different languages such as C#, PHP, Java, Perl, Python, JS, and Groovy.
+It also supports different OS, including Windows, Linux, UNIX, and Mac OS.
+It provides powerful methods such as Xpath, DOM, and CSS to locate elements.
+Since it is an open-source tool, developers can customize the code. Also, the developer community is supported by Google.
+Watch this video on Selenium automation testing tutorial:
+
+
+Youtube subscribe
+13. Define automation testing, and list down its advantages.
+Automation testing or test automation is the process of automating the testing process by using tools to write and execute test cases without any human intervention. It allows us to create scripts that can be executed frequently and generate detailed test reports of the application.
+
+Its advantages are as given below:
+
+It helps in the performance and functional testing of an application.
+It makes the execution of repeated test cases easy.
+It supports the parallel execution of multiple test cases.
+It boosts the accuracy and efficiency of the application by cutting down the chances of human error.
+It easily performs testing on a large-scale test matrix.
+It saves time and money by reducing the burden of arbitrary tasks.
+14. What are the significant changes/upgrades made to various Selenium versions?
+Selenium’s first version included only three sets of tools: Selenium IDE, Selenium RC, and Selenium Grid. There was no WebDriver included in the first version. Later, Selenium WebDriver was introduced and hence included in Selenium V2. However, as WebDriver got included, the use of Selenium RC was discouraged with time and is not much in use ever since. Selenium 3 is in use. There are some newly added Selenium features such as IDE and WebDriver. Selenium 4 is the latest released version.
+
+15. How many types of WebDriver APIs are available in Selenium?
+The following is the list of WebDriver APIs:
+
+AndroidDriver
+ChromeDriver
+EventFiringWebDriver
+FirefoxDriver
+HTMLUnitDriver
+InternetExplorerDriver
+iPhoneDriver
+iPhoneSimulatorDriver
+RemoteWebDriver
+Career Transition
+
+16. What is an exception test in Selenium?
+An exception test is a test that looks forward to an exception to be thrown inside a test class. It anticipates the @Test annotation followed by the expected exception name. For example, @Test(expectedException = NoSuchElementException.class) is an exception test for missing elements in Selenium.
+
+Note: Keep in mind the syntax, where the exception is suffixed with .class.
+
+17. What is POM (Page Object Model)? What are its advantages?
+Page Object Model is a design pattern used to create object repositories for the web UI elements. Every web page of an application has a corresponding page class that is responsible for locating the web elements and performing actions on them.
+
+Its advantages are as follows:
+
+It provides support to separate operations and flows on the UI from verification, hence improving code readability.
+As the object repository is independent of test cases, multiple tests can use the same object repository.
+It increases the reusability of the code
+That’s all for the basic Selenium Java interview questions. Let’s move on to the next section of intermediate Selenium WebDriver interview questions.
+
+Intermediate Selenium Interview Questions and Answers
+18. What are the different types of annotations used in Selenium? Explain the JUnit annotation linked with Selenium.
+In Java, a special form of syntactic metadata can be added to Java source code, which is known as ‘annotations’. Variables, parameters, packages, methods, and classes are annotated. Some of the JUnit annotations are:
+
+Test
+Before
+After
+Ignore
+BeforeClass
+AfterClass
+RunWith
+JUnit annotations linked with Selenium are:
+
+JUnit AnnotationsJUnit Annotations
+
+@Test: The @Test annotation finds a method to be a test method. When used before a test method, it is mentioned as ‘@Test’; it informs the JUnit framework that the following method is a test method.
+@Before: The @Before annotation is used to find the method that is executed before executing the test method. This method can be used to set up the test environment.
+@After: The @After annotation is a method that is executed after executing the test method. This method can be used to do a teardown, i.e., it is a method used to delete all temporary data, set up default values, clean up the test environment, etc.
+@BeforeClass: The @BeforeClass method is used only once before the start of all tests. Basically, this is used to perform cumbersome activities, like connecting to a database.
+@AfterClass: The @AfterClass method is used only once after executing all tests. This is used to carry out clean-up activities, like disconnecting from a database.
+Download the Selenium Cheat Sheet and use it whenever required especially during your interviews.
+
+19. Why do testers choose Selenium over QTP?
+Selenium is more widely used than QTP since:
+
+Selenium is an open-source tool, whereas QTP is a profitable tool
+Selenium is used specifically for testing web-based applications, while QTP can be used for testing client–server applications too
+Selenium supports multiple browsers like Firefox, IE, Opera, Safari, etc. and has multiple operating systems compatibility too. Selenium-supported OS platforms are Windows, Mac, Linux, etc. On the other hand, QTP is limited to Internet Explorer on Windows
+Selenium supports multi-programming language compatibility. Languages supported by Selenium are Python, Ruby, Perl, etc. But, QTP supports only VBScript
+
+
+
+Pawanpreet.Kaur@ihsmarkit.com
+
+OpenQA.Selenium.DriverServiceNotFoundException : The chromedriver.exe file does not exist in the current directory or in a directory on the PATH environment variable. The driver can be downloaded at http://chromedriver.storage.googleapis.com/index.html.
+  Stack Trace: 
+1. What do you understand by software testing?
+Software testing is a validation process which confirms that a system works as per the business requirements. It qualifies a system on various aspects such as usability, accuracy, completeness, efficiency, etc. ANSI/IEEE 1059 is the global standard that defines the basic principles of testing.
+
+2. When should you stop the testing process?
+The testing activity ends when the testing team completes the following milestones.
+
+Test case execution
+
+The successful completion of a full test cycle after the final bug fix marks the end of the testing phase.
+
+Testing deadline
+
+The end date of the validation stage also declares the closure of the validation if no critical or high-priority defects remain in the system.
+
+Code Coverage(CC) ratio
+
+It is the amount of code concealed via automated tests. If the team achieves the intended level of code coverage (CC) ratio, then it can choose to end the validation.
+
+Mean Time Between Failure (MTBF) rate
+Mean time between failure (MTBF) refers to the average amount of time that a device or product functions before failing. This unit of measurement includes only operational time between failures and does not include repair times, assuming the item is repaired and begins functioning again. MTBF figures are often used to project how likely a single unit is to fail within a certain period of time
+
+3. What do verification and validation mean in software testing?
+In software testing, verification is a process to confirm that product development is taking place as per the specifications and using the standard development procedures. The process comprises the following activities:
+
+Inspections
+Reviews
+Walk-throughs
+Demos
+Validation is a means to confirm that the developed product doesn’t have any bugs and is working as expected. It comprises the following activities:
+Functional testing
+Non-functional testing
+Preparing for a Job Interview! Check out our Top Software Testing Interview Questions.
+4. What is static testing? When does it start and what does it cover?
+Static testing is a white-box testing technique that directs developers to verify their code with the help of a checklist to find errors in it. Developers can start the static testing without actually finalizing the application or program. Static testing is more cost-effective than dynamic testing as it more areas than dynamic testing in a shorter time.
+
+5. Define Black-box testing.
+It is a standard software testing approach that requires testers to assess the functionality of the software as per the business requirements. The software is treated as a black box and validated as per the end user’s point of view.
+
+6. What is a test plan and what does it include?
+A test plan stores all possible testing activities to ensure a quality product. It gathers data from the product description, requirement, and use case documents.
+
+The test plan document includes the following:
+
+Testing objectives
+Test scope
+Testing the frame
+Environment
+Reason for testing
+Criteria for entrance and exit
+Deliverables
+Risk factors
+Get 100% Hike!
+Master Most in Demand Skills Now !
+
+Email Address
+
++91  IN          INDIA
+Phone Number
+7. What is meant by test coverage?
+Test coverage is a quality metric to represent the amount (in percentage) of testing completed for a product. It is relevant for both functional and non-functional testing activities. This metric is used to add missing test cases.
+
+8. Is it possible to achieve 100% testing coverage? How would you ensure it?
+It’s considered not possible to perform 100% testing of any product. But you can follow the below steps to come closer.
+
+Set a hard limit on the following factors:
+Percentage of test cases passed
+Number of bugs found
+Set a red flag if:
+Test budget is depleted
+Deadlines are breached
+Set a green flag if:
+The entire functionality gets covered in test cases
+All critical and major bugs must have a ‘CLOSED’ status
+9. What are unit testing and integration testing?
+Unit testing has many names such as module testing or component testing.
+
+Many times, it is the developers who test individual units or modules to check if they are working correctly.
+
+Whereas, integration testing validates how well two or more units of software interact with each other.
+
+There are three ways to validate integration:
+
+Big Bang approach
+Top-down approach
+Bottom-up approach
+10. Can we do system testing at any stage?
+No. System testing should start only if all modules are in place and they work correctly. However, it should be performed before UAT (user acceptance testing).
+
+11. Mention the different types of software testing.
+Various types of Software Testing used by manual testers are as follows:
+
+Unit testing
+Integration testing
+Regression testing
+Shakeout testing
+Smoke testing
+Functional testing
+Performance testing
+Load testing
+Stress testing
+Endurance testing
+ White-box and Black-box testing
+ Alpha and Beta testing
+System testing
+Career Transition
+
+12. What is the difference between a test driver and a test stub?
+The test driver is a section of code that calls a software component under test. It is useful in testing that follows the bottom-up approach.
+
+The test stub is a dummy program that integrates with an application to complete its functionality. It is relevant for testing that uses the top-down approach.
+
+For example:
+
+Let’s assume a scenario where we have to test the interface between Modules A and B. We have developed only Module A. Here, we can test Module A if we have the real Module B or a dummy module for it. In this case, we call Module B as the test stub.
+Now, Module B can’t send or receive data directly from Module A. In such a scenario, we’ve to move data from one module to another using some external features called test driver.
+13. What is agile testing and why is it important?
+Agile testing is a software testing process that evaluates software from the customers’ point of view. It is favorable as it does not require the development team to complete coding for starting QA. Instead, both coding and testing go hand in hand. However, it may require continuous customer interaction.
+
+14. What do you know about data flow testing?
+It is one of the white-box testing techniques.
+
+Data flow testing emphasizes for designing test cases that cover control flow paths around variable definitions and their uses in the modules. It expects test cases to have the following attributes:
+
+The input to the module
+The control flow path for testing
+A pair of an appropriate variable definition and its use
+The expected outcome of the test case
+15. What is the purpose of the end-to-end testing?
+End-to-end testing is a testing strategy to execute tests that cover every possible flow of an application from its start to finish. The objective of performing end-to-end tests is to discover software dependencies and to assert that the correct input is getting passed between various software modules and sub-systems.
+
+Intermediate Interview Questions
+16. The probability that a server-class application hosted on the cloud is up and running for six long months without crashing is 99.99 percentage. To analyze this type of a scenario, what test you will perform?
+Reliability testing
+
+17. What will you do when a bug turns up during testing?
+When a bug occurs, we can follow the below steps.
+
+We can run more tests to make sure that the problem has a clear description.
+We can also run a few more tests to ensure that the same problem doesn’t exist with different inputs.
+Once we are certain of the full scope of the bug, we can add details and report it.
+18. Why is it impossible to test a program thoroughly?
+Here are the two principal reasons that make it impossible to test a program entirely.
+
+Software specifications can be subjective and can lead to different interpretations.
+A software program may require too many inputs, outputs, and path combinations.
+19. How do you test a product if the requirements are yet to be freezed?
+If the required specifications are not available for a product, then a test plan can be created based on the assumptions made about the product. But we should get all assumptions well-documented in the test plan.
+
+20. If a product is in the production stage and one of its modules gets updated, then is it necessary to ret
+It is suggested to perform a regression testing and run tests for all the other modules as well. Finally, the QA should also carry out a system testing.
+
+21. How will you overcome the challenges faced due to the unavailability of proper documentation for testing?
+If the standard documents like System Requirement Specification or Feature Description Document are not available, then QAs may have to rely on the following references, if available.
+
+Screenshots
+A previous version of the application
+Wireframes
+Another reliable way is to have discussions with the developer and the business analyst. It helps in solving the doubts, and it opens a channel for bringing clarity on the requirements. Also, the emails exchanged could be useful as a testing reference.
+
+Smoke testing is yet another option that would help verify the main functionality of the application. It would reveal some very basic bugs in the application. If none of these work, then we can just test the application from our previous experiences.
+
+22. Is there any difference between retesting and regression testing?
+Possible differences between retesting and regression testing are as follows:
+
+We perform retesting to verify the defect fixes. But, the regression testing assures that the bug fix does not break other parts of the application.
+Regression test cases verify the functionality of some or all modules.
+Regression testing ensures the re-execution of passed test cases. Whereas, retesting involves the execution of test cases that are in a failed state.
+Retesting has a higher priority over regression. But in some cases, both get executed in parallel.
+23. As per your understanding, list down the key challenges of software testing.
+Following are some of the key challenges of software testing:
+
+The lack of availability of standard documents to understand the application
+Lack of skilled testers
+Understanding the requirements: Testers require good listening and understanding capabilities to be able to communicate with the customers the application requirements.
+The decision-making ability to analyze when to stop testing
+Ability to work under time constraints
+Ability to decide which tests to execute first
+Testing the entire application using an optimized number of test cases
+24. What are the different types of functional testing?
+Functional testing covers the following types of validation techniques:
+
+Unit testing
+Smoke testing
+UAT
+Sanity testing
+Interface testing
+Integration testing
+System testing
+Regression testing
+25. What are functional test cases and non-functional test cases?
+Functional testing: It is testing the ‘functionality’ of a software or an application under test. It tests the behavior of the software under test. Based on the requirement of the client, a document called a software specification or requirement specification is used as a guide to test the application.
+Non-functional testing: In software terms, when an application works as per the user’s expectation, smoothly and efficiently under any condition, then it is stated as a reliable application. Based on quality, it is very critical to test these parameters. This type of testing is called non-functional testing.
+26. What do you understand by STLC?
+Software testing life cycle (STLC) proposes the test execution in a planned and systematic manner. In the STLC model, many activities occur to improve the quality of the product.
+
+The STLC model lays down the following steps:
+
+Requirement Analysis
+Test Planning
+Test Case Development
+Environment Setup
+Test Execution
+Test Cycle Closure
+27. In software testing, what does a fault mean?
+Fault is a condition that makes the software fail to execute while performing the considered function.
+
+Become a Test Architect
+
+28. Difference between Bug, Defect, and Error.
+A slip in coding is indicated as an error. The error spotted by a manual tester becomes a defect. The defect which the development team admits is known as a bug. If a built code misses on the requirements, then it is a functional failure.
+
+29. How do severity and priority relate to each other?
+Severity: It represents the gravity/depth of a bug. It describes the application point of view.
+
+Priority: It specifies which bug should get fixed first. It defines the user’s point of view.
+
+30. List the different types of severity.
+The criticality of a bug can be low, medium, or high depending on the context.
+
+User interface defects – Low
+Boundary related defects – Medium
+Error handling defects – Medium
+Calculation defects – High
+Misinterpreted data – High
+Hardware failures – High
+Compatibility issues – High
+Control flow defects – High
+Load conditions – High
+Advanced Interview Questions
+31. What do you mean by defect detection percentage in software testing?
+Defect detection percentage (DDP) is a type of testing metric. It indicates the effectiveness of a testing process by measuring the ratio of defects discovered before the release and reported after the release by customers.
+
+For example, let’s say, the QA has detected 70 defects during the testing cycle and the customer reported 20 more after the release. Then, DDP would be: 70/(70 + 20) = 72.1%
+
+32. What does defect removal efficiency mean in software testing?
+Defect removal efficiency (DRE) is one of the testing metrics. It is an indicator of the efficiency of the development team to fix issues before the release.
+
+It gets measured as the ratio of defects fixed to total the number of issues discovered.
+
+For example, let’s say, there were 75 defects discovered during the test cycle while 62 of them got fixed by the development team at the time of measurement. The DRE would be 62/75 = 82.6%
+
+Go through the Manual Testing Training to get clear understanding of Weak AI and Strong AI.
+
+33. What is the average age of a defect in software testing?
+Defect age is the time elapsed between the day the tester discovered a defect and the day the developer got it fixed.
+
+While estimating the age of a defect, consider the following points:
+
+The day of birth of a defect is the day it got assigned and accepted by the development team.
+The issues which got dropped are out of the scope.
+Age can be both in hours or days.
+The end time is the day the defect got verified and closed, not just the day it got fixed by the development team.
+34. How do you perform automated testing in your environment?
+Automation testing is a process of executing tests automatically. It reduces human intervention to a great extent. We use different test automation tools like QTP, Selenium, and WinRunner. Testing tools help in speeding up the testing tasks. These tools allow you to create test scripts to verify the application automatically and also to generate the test reports.
+
+Preparing for a Job Interview! Check out our blog on Selenium Interview Questions now.
+
+35. Is there any difference between quality assurance, quality control, and software testing. If so, what is it?
+Quality Assurance (QA) refers to the planned and systematic way of monitoring the quality of the process which is followed to produce a quality product. QA tracks the test reports and modifies the process to meet the expectation.
+
+Quality Control (QC) is relevant to the quality of the product. QC not only finds the defects but suggests improvements too. Thus, a process that is set by QA is implemented by QC. QC is the responsibility of the testing team.
+
+Software testing is the process of ensuring that the product which is developed by developers meets the users’ requirements. The aim of performing testing is to find bugs and make sure that they get fixed. Thus, it helps to maintain the quality of the product to be delivered to the customer.
+
+36. Tell me about some of the essential qualities an experienced QA or Test Lead must possess.
+A QA or Test Lead should have the following qualities:
+
+Well-versed in software testing processes
+Ability to accelerate teamwork to increase productivity
+Improve coordination between QA and Dev engineers
+Provide ideas to refine QA processes
+Skill to conduct RCA meetings and draw conclusions
+Excellent written and interpersonal communication skills
+Ability to learn fast and to groom the team members
+37. What is a Silk Test and why should you use it?
+Here are some facts about the Silk Test tool:
+
+Skill tool is developed for performing regression and functionality testing of an application.
+It is used when we are testing Window-based, Java, web, and the traditional client/server applications.
+Silk Test helps in preparing the test plan and managing it to provide direct accessing of the database and validation of the field.
+Become a Selenium Automation Testing Expert
+
+38. On the basis of which factors you would consider choosing automated testing over manual testing?
+Choosing automation testing over manual testing depends on the following factors:
+
+Tests require periodic execution.
+Tests include repetitive steps.
+Tests execute in a standard runtime environment.
+Automation is expected to take less time.
+Automation is increasing reusability.
+Automation reports are available for every execution.
+Small releases like service packs include a minor bug fix. In such cases, executing the regression test is sufficient for validation.
+39. Tell me the key elements to consider while writing a bug report.
+An ideal bug report should consist of the following key points:
+
+A unique ID
+Defect description: A short description of the bug
+Steps to reproduce: They include the detailed test steps to emulate the issue. They also provide the test data and the time when the error has occurred
+Environment: Add any system settings that could help in reproducing the issue
+Module/section of the application in which the error has occurred
+Severity
+Screenshots
+Responsible QA: This person is a point of contact in case you want to follow-up regarding this issue
+40. Is there any difference between bug leakage and bug release?
+Bug leakage: Bug leakage is something, when the bug is discovered by the end user/customer and missed by the testing team to detect while testing the software. It is a defect that exists in the application and not detected by the tester, which is eventually found by the customer/end user.
+
+Bug release: A bug release is when a particular version of the software is released with a set of known bug(s). These bugs are usually of low severity/priority. It is done when a software company can afford the existence of bugs in the released software but not the time/cost for fixing it in that particular version.
+
+41. What is the difference between performance testing and monkey testing?
+Performance testing checks the speed, scalability, and/or stability characteristics of a system. Performance is identified with achieving response time, throughput, and resource-utilization levels that meet the performance objectives for a project or a product.
+
+Monkey testing is a technique in software testing where the user tests the application by providing random inputs, checking the behavior of the application (or trying to crash the application).
+
+42. What is exploratory testing?
+Exploratory testing is an approach to software testing, wherein testers learn simultaneously about the test design and test execution. In other words, it is a hands-on approach where testers are involved more in the test execution part than in planning.
+
+43. What is meant by system testing?
+System testing is a black-box testing technique, used on a complete integrated system, where it will test the system compliance as per the requirement.
+
+Become a Test Architect
+
+44. What are the benefits of test reports?
+Test reports will help us find the current status of a project and its quality. This can help stakeholders and customers take necessary actions. The complete documentation of test reports will help analyze different phases of the project.
+
+45. What is meant by latent defect?
+A latent defect is a hidden defect in an application/software, which cannot be identified by a user. However, this will not cause any failure to the application because the conditions will never be met.
+
+Above interview questions will help you clear the Selenium certification exam.
+
+Data mining can be defined as the process of extracting hidden predictive information from large databases and interpreting the data, while data warehousing may make use of a data mine for the analytical processing of the data in a faster way. Data warehousing is the process of aggregating data from multiple sources into one common repository.
+1. repeative words of sentence 
+https://www.youtube.com/watch?v=Wrriub4JSzU
+Create Project framework from Scratch:
+
+I.)
+POM framework project structure:
+
+1. Add dependencies
+Selenium.Support
+Selenium.WebDriver 
+Selenium.WebDriver.Chrome
+
+
+2. Add new folder "Wrappers"
+Add class file under the folder...
+What is the purpose of a wrapper?
+Wrappers are used for two primary purposes: 
+to convert data to a compatible format or 
+to hide the complexity of the underlying entity using abstraction.
+
+Wrapper Class to wrap the Primitive Data Types into objects. Hence Wrapper Classes are used, to wrap the primitive type into an object, so that we can use the Primitive Data Type as an object.
+Wrapper classes include methods to unwrap the object and give back the data type.
+ int k = 100;
+Integer it1 = new Integer(k); 
+
+Data types are divided into two groups:
+Primitive data types - includes String ,  byte , short , int , long , float , double , boolean and char. All primitives are immutable, i.e., they cannot be altered.
+Each of these primitive data types is an example of something that doesn't require a large amount of data for representation.
+Primitives are immutable
+This example will help you understand that primitive values are immutable. A primitive can be replaced, but it can't be directly altered.
+
+// Using a string method doesn't mutate the string
+let bar = "baz";
+console.log(bar);               // baz
+bar.toUpperCase();
+console.log(bar);               // baz
+
+// Assignment gives the primitive a new (not a mutated) value
+bar = bar.toUpperCase();       
+console.log(bar);               // BAZ
+
+// By contrast, using an array method mutates the array
+let foo = [];
+console.log(foo);               // []
+foo.push("plugh");
+console.log(foo);               // ["plugh"]
+
+Non-primitive data types - such as Arrays and Classes (you will learn more about these in a later chapter)
+ChromeOptions class has introduced in the latest/updated version of Selenium. It is helpful to make changes in the Chrome browser.
+DesiredCapabilities is an old concept (its usage in Java is deprecated.) to configure or make changes in the browser.
+
+
+3.Wrappers --> WebDriverFactory.cs
+Virtual method (CreateLocalWebDriver) of IWebDriver return type is written 
+
+
+cssselector ; using"#employeedId>span" //under id navigate to span
+
+
+
+Create Project framework from Scratch:
+https://www.youtube.com/watch?v=3kkXatC3k3E
+https://www.youtube.com/watch?v=Wrriub4JSzU   //Selenium C# Very well built Automation Framework from Scratch
+ 
+Extent report...https://www.youtube.com/watch?v=d6lSJHqc-zY
+
+.NET core .. Class library 
+?? Pages?? importParticipants separate class?? How to identify separate class??
+
+
+//use explicit wait...
+I.)PageRepository project
+POM framework project structure:
+
+1. skip it as common is already got packages, get common project reference here
+Add dependencies
+Selenium.Support
+Selenium.WebDriver 
+Selenium.WebDriver.Chrome
+
+2. Add "PageObjects" folder
+    --> inlcude all page classes of web pages ; EmployeeLogin.cs; EmployeeRegistration.cs;....
+        Eachpage --> 
+	1. define property of each  webelements 
+	2.Constructor with driver parameter--> and initialize the web page element at constructor by --> PageFactory.InitElements(driver,this); //this denotes the webElements that are defined in the page
+	3. write behavourial method/Abstract method
+	4. based on functionality other page method is called from the page class --> give driver to the next page; by returning the pageclass/object at the method --> Return ResultPage(driver);
+	Identify id by #
+    -->Add Screenshot folder
+
+II)Data project
+"Test Data" Folder
+	--> list of XML files 
+	--> list of Excel files
+
+
+III)TestScripts project
+    "Module1" folder
+	--> class files(inherits base class), calls test methods of "PageObject" class methods..
+	create instance of pageobject class and call the methods of the page class; Thread.Sleep() to see the results...
+	Write Assert method //Assert.IsTrue();
+
+    "Module2" folder
+	--> class files(inherits base class), calls test methods of "PageObject" class methods..
+
+	.....
+ 
+IV) Accelerator/Common project
+
+1. Add dependencies
+Selenium.Support
+Selenium.WebDriver 
+Selenium.WebDriver.Chrome
+1.Add new folder "Wrappers"
+Add class file under the folder...
+What is the purpose of a wrapper?
+Wrappers are used for two primary purposes: 
+to convert data to a compatible format or 
+to hide the complexity of the underlying entity using abstraction.
+
+Wrapper Class to wrap the Primitive Data Types into objects.
+Wrapper classes include methods to unwrap the object and give back the data type.
+Wrappers --> WebDriverFactory.cs
+Virtual method (CreateLocalWebDriver) of IWebDriver return type is written 
+
+2. "BaseClasses" folder
+		-->BasePage.cs -->BaseTest.cs
+basetest --> [setup], [teardown]
+
+3."Utils" folder
+	CommonUtil.cs
+	LocalDriverBuilder.cs -->  1.   private IWebDriver CreateWebDriver(string browserTarget) 2. Launch WebDriver
+
+4."Database" Folder-> 
+		-->DBUtility.cs --> it includes ReadFromDatabase and related methods that is used to get data from DB. or from AzureStorage
+		---DTO files--> EmployeeDTO.cs; orderDetailsDTO.cs; storeDTO.cs....
+
+
+5."Reporting" Folder-> 
+		-->SummaryReport.html
+		--> Summary .cs
+		-->TestCase.cs
+		-->Engine.cs, logic to write into summaryreport.html file
+		 public Summary Reporter
+     		   {
+            		get
+           		 {
+               		 return summary;
+            		}
+        	   }
+
+            	foreach (TestCase testCase in Reporter.TestCases)
+	            {
+        	        foreach (Browser browser in testCase.Browsers)
+                	{
+	                    foreach (Iteration iteration in browser.Iterations.FindAll(itr => itr.IsCompleted == true))
+        	            {
+
+
+
+IV)Executor project
+	TestSuiteRunner (windows/Web UI) to start test scripts on button click
+	it includes calling "parallel" class (System.Threading.Tasks) ; set value to MaxDegreeOfParallelism and ProcessEachWork by Invoke(baseCase, data);
+ 	static void Processor(int maxDegree)
+        {
+            try
+            {
+                if (ConfigurationManager.AppSettings.Get("ExecutionMode").ToLower().Equals("s"))
+                {
+                    ///Use this loop for sequential running of the test cases
+                    foreach (object[] work in testCaseToExecute)
+                    {
+                        ProcessEachWork(work);
+                    }
+                }
+                else if (ConfigurationManager.AppSettings.Get("ExecutionMode").ToLower().Equals("p"))
+                {
+                    /*Use this loop for parellel running of the test cases*/
+                    Parallel.ForEach(testCaseToExecute,
+                                     new ParallelOptions { MaxDegreeOfParallelism = maxDegree },
+                                     work =>
+                                     {
+                                         ProcessEachWork(work);
+                                     });
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+without using chromeexplorer.exe? the version of browser is absolute, how it is handled?
+
+extent report
+
+
+https://www.youtube.com/watch?v=Wrriub4JSzU
+
+
+   Attach a log file to the current test result
+
+Selenium C# Very well built Automation Framework from Scratch
+https://www.youtube.com/watch?v=Wrriub4JSzU
+
+
+Selenium 3 and Selenium 4 differences in detail and clear...
+   
+ChromeOptions class has introduced in the latest/updated version of Selenium. It is helpful to make changes in the Chrome browser.
+DesiredCapabilities is an old concept (its usage in Java is deprecated.) to configure or make changes in the browser.
+
+
+What is the basic difference between web application amd mobile application as end user....
+
+C# Selenium POM Framework Tutorial: Adding the Dependencies and driver configurations.:
+https://www.youtube.com/watch?v=86K88jv_EkY
+Part 2 | C# Selenium POM Framework Tutorial: Adding the BastTest and Page Object Classes
+https://www.youtube.com/watch?v=afRfRZmAUUY
+
+https://www.youtube.com/watch?v=lk0EYGn9Ano
+
+A Tester can get the complete application knowledge
+whereas A developer, though they are good in a particular module, 
+cannot get complete knowledge of the application most of the times.
+
+Since coding is involved, you get to still do some development work while slowly introducing yourself into the QA testing realm. Automation Developers are the liaisons between programmers, testers, managers, and basically all aspects of a typical DevOps team. 
+you are seeing holistic view of software rather than each technical component
+how you see things different , in end-user perspective and give some examples for Bugs,Omissions or UX issues you see in common software
+she can enjoy the real functionalities of the application.
+
+
+Agile:
+backlog grooming meeting 
+Handle alerts
+
+_______________________________
+
+Mock in unit test methods:
+ Mock<ILogger> mockLoggerRepo = new Mock<ILogger>();
+            Mock<ICDAUserRoleManager> mockCDAManagerRepo = new Mock<ICDAUserRoleManager>();
+            mockCDAManagerRepo.Setup(o => o.CreateUser(It.IsAny<UserRoleDTO>(), It.IsAny<string>())).Returns(It.IsAny<Task<string>>());
+            var companyObject = new CDAUserRoleManager(mockLoggerRepo.Object, mockDBContextFactory.Object);
+			var result = companyObject.CreateUser(usersDTO, "apasham@deloitte.com");
+            Assert.AreEqual(result.Result, "The user is created successfully in CDA, but failed to create in Digital Hub due to a technical error. Please contact the Digital Hub Team for assistance.");
+        }
+_____________________________
+API is a more general set of protocols and is deployed over the software to help it interact with some other software
+
+___________________________________________________
+Singleton pattern uses Sealed and static keywords
+he Singleton's instance is stored in a static field. There there are
+        // multiple ways to initialize this field, all of them have various pros
+        // and cons. In this example we'll show the simplest of these ways,
+        // which, however, doesn't work really well in multithreaded program.
+
+The Singleton should always be a 'sealed' class to prevent class
+    // inheritance through external classes and also through nested classes.
+
+
+
+ Timeout Testing checks if the code runs within specified time limits.
+
+timeout testing
+code coverage
+
+ref
+Coding question and answers:click on next for another coding..
+https://www.javatpoint.com/csharp-program-to-convert-decimal-to-binary
+
+singleton 
+covariance and contravariance:
+Using C# type conversion techniques, not only can you convert data types but you can also convert object types. 
+The type conversion in C# can be either implicit conversion or an explicit conversion.
+ If one type of data is automatically converted into another type of data,
+ it is known as implicit conversion. There is no data loss due to implicit conversion.
+ But explicit conversion is a forced conversion and there may be a data loss. 
+Type conversions occur mainly when we pass arguments to a function or mixing mode arithmetic etc.
+
+
+
+@
+
+4.45 --> IHS
+
+
+
+
+Interview Questions
+
+Interviews at GSPANN Technologies:
+1) Write a program to find largest number in your mobile number if I stored number in long number = 7702210731?
+
+2) Write a program for count the charters in string “MALAYALAM” (how many time M, A, L, Y repeated)?
+
+3) What is encapsulation and write the program for it?
+
+4) What is interface?
+
+5) What are the listeners in TestNG?
+
+6) Write a program for matrix [ 1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1 ]
+
+7) Class Parent {
+Method1();
+Method2();
+}
+Class child extends Parent {
+p.method1();
+p.method2();
+p.method3();
+}
+Public static void main() {
+Child c = new parent();
+Parent p = new child();
+}
+IN the above code p.method3() will execute (or) not? And can we write the child c = new parent(); ?
+
+8) Program for taking the screen shot ?
+
+9) In TESTNG I have 5 test methods (not before and after) and how they will execute? And if I want 1 and 3 methods need to execute first and 2,4 and 5 are need to execute second then how we will write the code?
+TestNG Annotations
+10) For the above question he want to 1 and 3 as regression suite and 2, 4 and 5 are sanity suite then how you will implement?
+
+_________________________________________________
+
+
+What is the difference between Array & Linked List and which one is better ( he gave me a scenario)
+
+http and https: Tell me about HTTP protocol. Is it stateful or stateless? Difference between http and https. Is https stateless?
+REST : Tell me about REST Architecture. What are some of its features?
+Difference between MySQL and Mongodb
+DBMS-indexing : How does indexing work in DBMS?
+What is B+ indexing
+Write a pseudo code for BST traversal and tell me about different BST traversals.
+What is the difference between Array & Linked List and which one is better ( he gave me a scenario)
+_______________________________
+What is Indexing in DBMS? Why do we use Indexing and what are its different types?
+Indexing is used to optimize the performance of a database by minimizing the number of disk accesses required when a query is processed. The index is a type of data structure. It is used to locate and access the data in a database table quickly.
+What are the types of indexes in DBMS?
+Clustered Index. Clustered Index store and sort rows of data in a view or table depending on their central values. ...
+Non-Clustered Index. It represents a structure, which is isolated from data rows. ...
+Column store Index. ...
+Filtered Index. ...
+Hash Index. ...
+Unique Index.
+one clustered index in each table, as it can empower the client to store data in a solitary request. Clustered index store data in an arranged way, and in this way, at whatever point data is contained in the table in an arranged manner implies it is orchestrated with a clustered index.
+In the non-clustered index, the client can undoubtedly add non-key to the leaf level, as it sidesteps the current index key cut-off points and performs completely covered recorded questions. A non-clustered index is made to improve the general exhibition of much of the time posed inquiries, which are not covered by grouped things.
+_________________________
+Types of the Database in SQL server
+tempdb
+msdb
+Master
+Model
+_______________________________
+const int myNum = 15;
+myNum = 20; // error
+_________________________________________________
+What are Triggers?
+--?
+What is a Stored Procedure? What is the difference between a function & stored procedure?
+What is the difference between a stored procedure and a function?
+In a function, it is mandatory to use the RETURNS and RETURN arguments,
+ whereas in a stored procedure is not necessary. 
+In few words, a stored procedure is more flexible to write any code that you want, 
+while functions have a rigid structure and functionality.
+Functions can be called from Stored procedures,
+ while a Stored procedure cannot be called from a function
+Inside the function we can not use the DML(Data manipulation language) commands such as Insert, Delete, Update.
+inside the procedure we can use DML commands.
+Function is used to calculate something from a given input. Hence it got its name from Mathematics
+While procedure is the set of commands, which are executed in a order
+Function doesn’t support try-catch blocks.	
+SP it supports try-catch blocks.
+Function does not support explicit transaction handles
+While procedure supports explicit transaction handles.
+
+
+--> 
+Triggers are the SQL codes that are automatically executed in response to certain events on a particular table.
+These are used to maintain the integrity of the data. A trigger in SQL works similar to a real-world trigger. For example, when the gun trigger is pulled a bullet is fired
+Types of SQL Triggers
+These are – INSERT, UPDATE, and DELETE.
+SQL Server, we have 3 groups of triggers:
+DML (data manipulation language) triggers – We’ve already mentioned them, and they react to DML commands. These are – INSERT, UPDATE, and DELETE
+DDL (data definition language) triggers – As expected, triggers of this type shall react to DDL commands like – CREATE, ALTER, and DROP
+Logon triggers – The name says it all. This type reacts to LOGON events
+____________________________________________________________________________________________________________
+--> MongoDB is a document-based non-relational database management system. It's also called an object-based system
+KEY DIFFERENCES:
+MongoDB represents data as of JSON documents whereas MySQL represents data in tables and rows.
+In MongoDB, you don’t need to define the schema while in MySQL you need to define your tables and columns
+MongoDB doesn’t support JOIN but MySQL supports JOIN operations.
+MongoDB uses JavaScript as query language while MySQL uses the Structured Query Language (SQL).
+MongoDB is an ideal choice if you have unstructured and/or structured data with the potential for rapid growth while MYSQL is a great choice if you have structured data and need a traditional relational database.
+If most of your services are cloud based MongoDB is the best suited for you but If data security is your priority then MYSQL is the best option for you.
+
+ B+ Tree is an extension of B Tree which allows efficient insertion, deletion and search operations. In B Tree,
+
+Binary Search Tree Traversal | BST Traversal. Description. Binary Search Tree Traversal or BST Traversal is same as Binary Tree Traversal. In other words, preorder traversal, inorder traversal and postorder traversal of BST is performed in the same way as that of binary tree.
+
+
+____________________________________________________________________________________
+-->Web element is an interface used to identify the elements in a web page.
+-->WebDriver is an interface used to launch different browsers such as Firefox, Chrome, Internet Explorer, Safari etc.,
+-->FindBy is an annotation used in Page Object Model design pattern to identify the elements.
+-->Find Element is a method in POM to identify the elements in a web page
+____________________________________________________________________________________
+OOPS in automation:
+ABSTRACTION
+Abstraction is the methodology of hiding the implementation of internal details and showing the functionality to the users.
+In Page Object Model design pattern, we write locators (such as id, name, xpath etc.,) and the methods in a Page Class. We utilize these locators in tests but we can’t see the implementation of the methods. Literally we hide the implementations of the locators from the tests.
+
+INTERFACE:
+WebDriver itself is an Interface. So based on the above statement WebDriver driver = new FirefoxDriver(); we are initializing Firefox browser using Selenium WebDriver. It means we are creating a reference variable (driver) of the interface (WebDriver) and creating an Object. Here WebDriver is an Interface as mentioned earlier and FirefoxDriver is a class.
+
+
+INHERITANCE
+one class acquires the properties (instance variables) and functionalities of another class is known as Inheritance.
+We create a Base Class in the Automation Framework to initialize WebDriver interface, WebDriver waits, Property files, Excels, etc., in the Base Class.
+We extend the Base Class in other classes such as Tests and Utility Class.
+Here we extend one class (Base Class like WebDriver Interface) into other class (like Tests, Utility Class) is known as Inheritance.
+
+METHOD OVERLOADING
+We use Implicit wait in Selenium. Implicit wait is an example of overloading. In Implicit wait we use different time stamps such as SECONDS, MINUTES, HOURS etc.,
+Action class in TestNG is also an example of overloading.
+Assert class in TestNG is also an example of overloading.
+A class having multiple methods with same name but different parameters is called Method Overloading
+
+METHOD OVERRIDING
+We use a method which was already implemented in another class by changing its parameters. To understand this you need to understand Overriding in Java.
+Declaring a method in child class which is already present in the parent class is called Method Overriding. Examples are get and navigate methods of different drivers in Selenium .
+
+ENCAPSULATION
+All the classes in a framework are an example of Encapsulation. In POM classes, we declare the data members using @FindBy and initialization of data members will be done using Constructor to utilize those in methods.
+Encapsulation is a mechanism of binding code and data (variables) together in a single unit.
+________________________________________________________________________
+ACID properties in DBMS.ACID properties in DBMS make the transaction over the database more reliable and secure.
+1. Atomicity · 2. Consistency · 3. Isolation · 4. Durability
+Atomicity:It simply says “All or Nothing”. There is no intermediate.
+If you are doing any database transaction (set of the read/write operations), all the operations should be executed otherwise none.
+Consistency:
+Every attribute in the database has some rules to ensure the stability of the database. The constraint puts on the data value should be constant before and after the execution of the transaction.
+If the system fails because of the invalid data while doing an operation, revert back the system to its previous state.
+Isolation: If you are performing multiple transactions on the single database, operation from any transaction should not interfere with operation in other transactions. the execution of all transactions should be isolated from other transactions.
+ Durability:All the above three properties should be satisfied while the transaction in progress. 
+But durability issues can happen even after the completion of the transaction.
+ Sometimes it may happen as all the operation in the transaction completed but the system fails immediately. In that case, changes made while transactions should persist. The system should return to its previous stable state
+_____________________________________________________________-
+write algorithms   https://logicmojo.com/?gclid=CjwKCAjw682TBhATEiwA9crl33db4Kv18Ia48oNHBscIvmZixpTtWz1Wuj8nXqLsurjsMUAGELTDdhoC1XwQAvD_BwE
+
+_______________________________________
+Qualitia tool is a Test automation engine that creates, executes, and maintains script-free automated tests on multiple test automation tools and technologies.
+, It can be used to automate web applications, desktop application & API testing.
+Common Problem that i faced using Qualitia  is :
+it doesnt have any thing that protect you from data loss
+it doesnt have reliable object spy with the help of that we can achieve better element .
+It doesnt have good UI as compare to its peers .
+________________________________________________________________
+Ranorex is one of the famous automated GUI testing tool used by most Quality Assurance and testing companies that can help ease out the testing process. 
+It is a GUI test automation framework used for the testing of web-based, desktop, and mobile applications.
+Ranorex is easy-to-use low-code/no-code automation tools and a full IDE for endless extensibility. 
+GUI Testing is the technique used in testing a GUI for an application.
+ It states if the application or its other elements are functioning with respect to user interface behavior. It also detects if the appearance elements such as fonts and images conform to design specifications stated by the customer.
+________________________________________________________________________________
+
+
+project exp... framwork... folder structure.. reporting... team manage-->...
+chalanges faced
+--> ui elementts -->stale elements--> events --> wait --> events
+graph--> dynamic element...
+
+-->
+Takescreenshot??
+step1) TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+Step 2) Call getScreenshotAs method to create image file
+File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+
+-->
+Login element
+
+table--> 2 row -->3rd column....find webelement..
+
+action class code ...
+
+--> scroll and find webelement
+scrolup and scrolldown--> action method...
+
+
+--> write abstract class...
+
+
+--> framework enhancement; suggestion framework; 
+participated scenario ...
+
+-->one identity identity-centric security strategy with Identity Governance and Administration (IGA),
+****************
+My UI testing Project folder structure:
+1. TestSuiteExecutor project:
+
+-->Execute test scripts:
+
+ Parallel.ForEach(testCaseToExecute,
+                  new ParallelOptions { MaxDegreeOfParallelism = maxDegree },
+                           work =>
+                              {
+                                ProcessEachWork(work);
+                               });
+                }
+
+
+ typeTestCase.GetMethod("Execute").Invoke(baseCase, data);
+
+
+2. SuiteRunner project
+ProcessEachWork Processes all the test scripts
+
+3. DTO project
+
+4. Test project
+-->TestDate
+-->Test Scripts
+
+5. Repository project
+Common functions
+Page functions
+
+6. Accelerators project	****????
+BaseTest file??? BasePage file ??
+
+******************************
+XPath Axes..
+
+__________________________________
+Notes:
+https://drive.google.com/drive/folders/1pBUYDXa2tcW_1UfI_SXdnMPQ797AHNZB
+
+Interview Q ans A:
+https://www.softwaretestingmaterial.com/selenium-interview-questions/
+
+POM: As per the Page Object Model, we have maintained a class for every web page. 
+Each web page has a separate class and that class holds the functionality and members of that web page. 
+Separate classes for every individual test.
+
+-->
+Test Base Class: Test Base class (TestBase.java) deals with all the common functions used by all the pages. This class is responsible for loading the configurations from properties files, Initializing the WebDriver, Implicit Waits, Extent Reports, and also to create the object of FileInputStream which is responsible for pointing towards the file from which the data should be read.
+
+
+
+
+API TESTING PROJECT CODE VIDEO...
+https://github.com/apitestingco
+https://github.com/apitestingco/KarateAPIAutomation
+https://github.com/apitestingco/selenium-pom-demo
+https://github.com/apitestingco/selenium-pom-demo
+https://github.com/apitestingco/RestAssured-Workshop
+************************************
+==>API (application programming interface) TESTING PROJECT folder structure: https://www.youtube.com/watch?v=6gIi15mH464
+1.TESTNG --> using for anotation part. advbanced annotation??
+2.Rest assured -->  API request.. different http methods...
+3.Log4j core: logging
+4.allure - testng -->  reporting
+
+5.src --> 
+	**** main (part) --> 
+	a. mentioning endpoint -->API constants
+	b.Payload folder --> payload data --> request method like post, put, patch..
+	c. Utils
+	Data util --> uses filo... to read excel file
+	Test Util --> Unique names.. other functionalities???
+	d. POJOS-> gitHubRepo
+
+	**** test (part) --> 
+	Tests
+	-->BaseTest (file): Create Spec builder--> Preparing API request; common code is added here
+	PostCreateRepo(file); GetRepoTest(file);--> inherited from BaseTest (file)
+	-->GetRepoTest: making get API request
+	-->PostCreateRepo: post test cases; base path, payload, methods, assertions
+
+	Action
+	-->API actions --> get data from JSON
+	-->Assert actions
+	verify status code; verify response body; verify expected results , and more......
+6.resource --> static data...base url, token,username 
+
+************************************
+
+A PATCH request is considered a set of instructions on how to modify a resource
+
+PUT is a method of modifying resource where the client sends data that updates the entire resource .
+PATCH is a method of modifying resources where the client sends partial data that is to be updated without modifying the entire data.
+
+Roles and responsibilities of automation tester:
+1. optimize the existing frame work as per the latest changes
+2. metrics that were important to your organization, 
+such as the status of requirements, number of reopened defects, etc. Today, you'll be looking at a new set of metrics that you'll need to track as part of an agile organization, such as sprint burndown, velocity, and release burndown.
+3. design and automate web application testing using Selenium WebDriver, REST API 
+4.Analyze, design and build automated test cases based on system requirements and design specification.
+5. Work closely with the Business analysts team to understand the functionality and devise positive and negative test strategies
+6. Validate, Verify and Sign off on releases
+7.implementation of the test plan
+8. Managing the list of defects
+
+
+Negative testing ensures that your application can gracefully handle invalid input or unexpected user behavior
+
+What are the challenges and limitations of Selenium WebDriver?
+We cannot test the windows application
+We cannot test mobile apps
+Limited reporting
+Handling dynamic Elements
+Handling page load
+Handling pop up windows
+Handling captcha
+
+
+Handling CAPTCHA
+We can not automate OTP submission
+We cannot automate CAPTCHA, as it is not meant to be automatized. 
+ Either ask dev team for a workaround, like configure CAPTCHA in test environment in such a way it will always accept 1 specific value. Ask developer to disable the CAPTCHA module in testing environment.
+By disabling the Captcha in the testing environment.
+Adding a hook to click the Captcha checkbox. 
+
+What type of tests have you automated?
+Our main focus is to automate test cases to do Regression testing, Smoke & Sanity testing. 
+Sometimes based on the project and the test time estimation, we do focus on End to End testing.
+
+What are the 4 Agile meetings?
+What are the four types of Agile meetings?
+Sprint planning meeting. What it is: The sprint planning session is when the Scrum team discusses what work they want to tackle in the next sprint and then prioritizes that work accordingly. ...
+Daily standup meeting. ...
+Sprint review meeting. ...
+Sprint retrospective meeting.
+_________________________________
+Ceremony meeting --> 
+Backlog grooming is a scrum ceremony and part of the agile meeting process. 
+Backlog grooming meetings are typically held toward the end of a sprint. The goal of the meeting is to keep your backlog (the complete list of projects that remain to be done) up-to-date and ready to be pulled from for upcoming sprints.
+1. What wasn’t completed last sprint that needs to be completed? (5 minutes)
+2. What came up that needs to be fixed? 
+As you’re continuously building and refining a product, you’ll inevitably run into bugs or larger problems with your journey. Determine the scope of work and prioritize those projects in this meeting.
+3. What needs to get done to move our product forward? What’s the highest priority?
+Order your backlog by priority (and group by sprints)
+Keep a record of your backlog meetings
+____________________________
+
+Practical 
+
+
+
+
+== and === difference?
+ if you compare a number with a string with numeric literal, == allows that, but === doesn't allow that, because it not only checks the value but also type of two variable, if two
+Which is faster == or === in JS?
+So === faster than == in Javascript
+
+=== compares if the values and the types are the same. == compares if the values are the same, but it also does type conversions in the comparison. Those type conversions make == slower than ===.
+
+using and using block ??
+Why we should use using in C#?
+In C#, the using keyword has two purposes: 
+The first is the using directive, which is used to import namespaces at the top of a code file. 
+The second is the using statement. C# 8 using statements ensure that classes that implement the IDisposable interface call their dispose method
+
+
+GC --> background --> dispose --> Managed and unmanaged code
+
+azai engine
+
+JMeter --> Performance
+
+
+public class A
+{
+  public static int a = B.b + 1;
+}
+
+public class B
+{
+  public static int b = A.a + 1;
+}
+ 
+public class MainClass
+{
+  public static void Main()
+  {
+    Console.WriteLine( "A.a={0}, B.b={1}", A.a, B.b );
+  }
+}
+
+
+
+Oracle:
+Clustered index and non clustered index
+
+SQL: Material view
+When triggers are used?
+Sample Static clas interview codes
+Logical questions
+Interview puzzles
+
+var list = new int[] {3,4,7,11};
+
+var where = list.Where(elem => elem.IsEven());
+var select = list.Select(elem => elem.IsEven());
+
+//debugger
+where = ...
+select = ...
+
+
+
+..Test plan: https://www.javatpoint.com/test-plan
+
+Takescreenshot??
+step1) TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+Step 2) Call getScreenshotAs method to create image file
+File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+.. Testclass... 
+
+test scenario...https://www.javatpoint.com/test-scenario
+Test Scenario
+The test scenario is a detailed document of test cases that cover end to end functionality of a software application in liner statements. The liner statement is considered as a scenario.
+ The test scenario is a high-level classification of testable requirements. These requirements are grouped on the basis of the functionality of a module and obtained from the use cases.
+
+
+Test Plan
+A test plan is a detailed document which describes software testing areas and activities. It outlines the test strategy, objectives, test schedule, required resources (human resources, software, and hardware),
+ test estimation and test deliverables.
+The test plan is a base of every software's testing. It is the most crucial activity which ensures availability of all the lists of planned activities in an appropriate sequence.
+The test plan is a template for conducting software testing activities as a defined process that is fully monitored and controlled by the testing manager. The test plan is prepared by the Test Lead (60%), Test Manager(20%), and by the test engineer(20%).
+
+Test strategy:
+Test strategy is a set of guidelines that explains test design and determines how testing needs to be done.
+ 
+
+Epics:
+Jira Epic
+Jira epic is a large user story which is broken into smaller tasks (user stories) based on the customer or end-user needs.
+Based on the customer needs, the task is added or removed from the epic as necessary.
+Epics are used to organize the work and to create a hierarchy.
+Epics maintain the agility by organizing larger tasks into smaller tasks.
+Epic is the top-tier of the work hierarchy, which is used by the developers.
+Epics are larger stories which have distinct start and end.
+Epics can span to multiple sprints, i.e., the epics are delivered over the multiple sprints.
+Epics can contain stories, bugs, and tasks within them, and grouping them makes a large story.
+When epics contain stories, bugs, or tasks, then all these issue types are represented at the same level in a hierarchy in Jira.
+Stories, bugs, tasks represent a single piece of work, while epic is a group of related issues.
+
+
+
+
+Jera tool --> https://www.javatpoint.com/jira-tutorial.
+
+Scrum: https://www.javatpoint.com/jira-scrum
+
+read JSON..
+WebAPI automation testing... 
+?? explicit wait and fluent wait
+response code.
+
+rest API attributes..
+Postman.. collection...javascript...
+
+
+Asyn wait.....
+
+
+kind of application framework... POM..
+unittesting framework --> NUnit...
+
+for standalone application such as Adobe Photoshop,
+we will perform the following types of testing:
+Smoke testing→ Functional testing → Integration testing →System testing →Adhoc testing → Compatibility testing → Regression testing→ Globalization testing → Accessibility testing → Usability testing → Reliability testing → Recovery testing → Installation or Uninstallation testing
+
+
+BDD..
+
+Encapsulation is defined as the wrapping up of data under a single unit.
+ in encapsulation, the data in a class is hidden from other classes, so it is also known as data-hiding.
+Encapsulation can be achieved by: Declaring all the variables in the class as private and using C# Properties in the class to set and get the values of variables
+
+
+Most user interactions like clicking on a button, entering text in textbox can be done using the WebDriver Element Commands. 
+For e.g. Commands like WebElement.click() and WebElement.sendKeys() are used to click on buttons and enter text in text boxes. 
+Submitting a form can be done using the WebElement.submit() command.
+Even interactions with drop-down are enabled using the Select class which exposes commands like selectByValue(), deselectAll() to select and deselect options.
+
+Actions class:
+there are complex interactions like Drag-n-Drop and Double-click which cannot be done by simple WebElement commands. 
+To handle those types of advance actions we have the Actions class in Selenium.
+Actions class is a collection of individual Action that you want to perform. 
+The user-facing API to perform complex user gestures. Use this class rather than using the Keyboard or Mouse directly.
+The actions class also implements the builder patterns by creating a composite action that contains a group of actions specified by method calls. 
+CompositeAction in selenium is a class that collects all the actions and performs them at the same time. It implements an Action interface.
+
+Individual action mentioned above are represented by a class called Action
+There is a huge collection of methods available in Actions class
+Action Class:It is only used to represent the single user interaction to perform the series of action items build by Actions class.
+
+1. Import namespaces
+import org.openqa.selenium.interactions.Actions;
+
+import org.openqa.selenium.interactions.Action;
+
+2. instantiate actions class: it needs the WebDriver object to initiate its class.
+
+Actions actions = new Actions(webdriver object);
+
+3. . Generate actions sequence: // perform capital letter in a textbox
+WebElement element = driver.findElement(By strategy to identify element);
+
+actions.keyDown(element, Keys.SHIFT);
+
+actions.sendKeys("TextToBeConvertAndSendInUpperCase");
+
+actions.keyUp(Keys.SHIFT);
+
+actions can be clubbed together as below:
+
+actions.keyDown(element, Keys.SHIFT).sendKeys("TextToBeConvertAndSendInUpperCase").keyUp(Keys.SHIFT);
+actions.Mousehover(element);
+
+4. Build the actions sequence:
+
+Now, build this sequence using the build() method of Actions class and get the composite action. Build method generates a composite action containing all actions so far which are ready to be performed.
+
+Action action = actions.build();
+
+
+5. Perform actions sequence: And finally, perform the actions sequence using perform() method of Action Interface.
+
+action.perform();
+
+Methods in Actions class of Selenium
+There are a lot of methods in this class which can be categorized into two main categories:
+
+Keyboard Events
+Mouse Events
+Different Methods for performing Keyboard Events:
+keyDown(modifier key): Performs a modifier key press.
+sendKeys(keys to send ): Sends keys to the active web element.
+keyUp(modifier key): Performs a modifier key release.
+Different Methods for performing Mouse Events:
+click(): Clicks at the current mouse location.
+doubleClick(): Performs a double-click at the current mouse location.
+contextClick() : Performs a context-click at middle of the given element.
+clickAndHold(): Clicks (without releasing) in the middle of the given element.
+dragAndDrop(source, target): Click-and-hold at the location of the source element, moves to the location of the target element
+dragAndDropBy(source, xOffset, yOffset):  Click-and-hold at the location of the source element, moves by a given offset
+moveByOffset(x-offset, y-offset): Moves the mouse from its current position (or 0,0) by the given offset
+moveToElement(toElement): Moves the mouse to the middle of the element
+release(): Releases the depressed left mouse button at the current mouse location
+
+
+
+
+Selenium Framework is a suite of automation testing tools that is based on the JavaScript framework. 
+It could run the tests directly on the target browser, drive the interactions on the required web page and rerun them without any manual input.
+
+
+Selenium Framework:
+There are mainly three types of frameworks created by Selenium WebDriver to automate manual test cases:
+Data-Driven Test Framework. 
+Keyword Driven Test Framework. 
+Hybrid Test Framework.
+
+Automation Framework is not a single tool or process, 
+but it is a collection of tools and processes working together to support automated testing of any application. It integrates various functions like libraries, test data, and various reusable modules.
+
+
+Cigniti.Automation.SuiteRunner, UI is used to select the module to run the test script .
+
+
+
+class Solution {
+    public bool solution(int[] A, int K) {
+        int n = A.Length;
+        for (int i = 0; i < n - 1; i++) {
+            if (A[i] + 1 < A[i + 
+
+                return false;
+        }
+        if (A[0] != 1 && A[n - 1] != K)
+            return false;
+        else
+            return true;
+    }
+}
+
+
+
+-->POM example
+https://www.youtube.com/watch?v=3kkXatC3k3E
+
+
+
+****"csharpcorner" remove duplicate characters....
+
+*** count od repeated strings...
+*** capture the 2nd element of search box list...
+
+
+                //if (element != null)
+                //{
+                //    //try
+                //    //{
+                //    //    string script = String.Format(@"arguments[0].style.cssText = ""border-width: 2px; border-style: solid; border-color: {0}"";", "orange");
+                //    //    IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)Driver;
+                //    //    jsExecutor.ExecuteScript(script, new object[] { element });
+                //    //    jsExecutor.ExecuteScript(String.Format(@"$(arguments[0].scrollIntoView(true));"), new object[] { element });
+                //    //}
+                //    //catch { }
+
+SpecFlow --> BDD
+https://www.youtube.com/watch?v=rzI46tYHa4c
+
+
+
+
+
+-->Web Driver 
+It is a web automation framework which allows us to execute test across various browsers. It can execute multiple tests over multiple browsers on multiple OS. 
+There are multiple programming languages which are supported by  Web Driver such as Java, Python, Ruby, .Net, PHP to create test scripts.
+
+--?Idempotency essentially means that the result of a successfully performed request is independent of the number of times it is executed.
+ Idempotency with HTTP Methods
+If we follow the REST principles in designing our APIs, we will have automatically idempotent REST APIs for GET, PUT, DELETE, HEAD, OPTIONS, and TRACE methods. Only POST APIs will not be idempotent.
+
+POST is NOT idempotent.
+GET, PUT, DELETE, HEAD, OPTIONS and TRACE are idempotent.
+Let’s analyze how the above HTTP methods end up being idempotent – and why POST is not.
+
+--> Using Selenium type of testing can be done are:
+Functional Testing:
+
+Regression Testing: Regression Testing is defined as a type of software testing to confirm that a recent program or code change has not adversely affected existing features.
+Regression Testing is nothing but a full or partial selection of already executed test cases which are re-executed to ensure existing functionalities work fine.
+
+Sanity : Sanity testing is performed to ensure that the code changes that are made are working as properly.
+Smoke Testing:  Smoke Testing is verifying whether the important features are working and there are no showstoppers in the build that is under testing.
+Responsive Testing: assess the design on different screen widths for a 'true' test of 'adaptivity'.if all the users get an optimal viewing experience on their devices,
+Cross Browser Testing:Cross Browser testing is a type of non-functional testing that lets you check whether your website works as intended when accessed through: Different Browser-OS combinations i.e., on popular browsers like Firefox, Chrome, Edge, Safari—on any of the popular operating systems like Windows, macOS, iOS and Android.
+
+UI testing (black box)
+.;Integration Testing
+
+-->What is difference between Selenium 3 and Selenium 4?
+In the new version of Selenium, they have made some internal changes in the API. Earlier in Selenium 3, the Chrome driver extends directly to the Remote Web Driver class.
+ But now in Selenium 4, Chrome driver class extends to Chromium Driver
+
+-->The main difference between selenium 3.0 and selenium 2.0 is that now all the major browser vendors will provide their own WebDriver implementations
+
+--> Explain the limitations of selenium testing?
+Selenium cannot extend support to the Windows applications, 
+it only works on the web based applications. 
+Selenium is not capable of performing mobile automation on its own. 
+Selenium does not have any inbuilt reporting feature. 
+Selenium is not accurate while dealing with handling dynamic web elements.
+
+--> Explain the same-origin policy and how is it handled?
+Same Origin policy prohibits JavaScript code from accessing elements from a domain that is different from where it was launched
+To avoid “Same Origin Policy” proxy injection method is used, 
+in proxy injection mode the Selenium Server acts as a client configured HTTP proxy , which sits between the browser and application under test and then masks the AUT under a fictional URL
+
+--> What is the X-Path in Selenium and why we use it?
+-->  XPath is a technique in Selenium to navigate through the HTML structure of a page. 
+XPath is a technique in Selenium to navigate through the HTML structure of a page. 
+It can be used for HTML and XML documents to locate any element in a web page using HTML DOM structure.
+Types of XPath in Selenium
+1. Absolute Path : html/body/form/input[3]
+2. Relative Path : A relative path, or a double slash search, begins with double slashes. The double slashes signify a break in the absolute path.
+//form/input[3]
+
+--> How to handle dynamic elements in Selenium using XPath?
+1. Using attributes : //form[@id='loginForm']/input[3]
+2. Logical operators in selections: //input[@id='name' or @name='name']mouse
+3. Using text: One may search for an element using the text that it contains too. ;   
+ex.: //a[text()='Click Me']
+
+--> Explain the difference between type keys and type commands?
+1. The purpose of type() command in Selenium IDE, is to type any given text into the text fields in the application.
+
+2. TypeKeys() Method. WebDriver. Simulates keystroke events on the specified element, as though you typed the value key-by-key.
+Simulates keystroke events on the specified element, as though you typed the value key-by-key.
+This is a convenience method for calling keyDown, keyUp, keyPress for every character in the specified string; this is useful for dynamic UI widgets (like auto-completing combo boxes) that require explicit key events.
+
+--> 2.Type of waits in selenium? implicit, explicit and fluent wait.
+https://www.browserstack.com/guide/wait-commands-in-selenium-webdriver
+1. Implicit Wait directs the Selenium WebDriver to wait for a certain measure of time before throwing an exception.
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+2. By using the Explicit Wait command, the WebDriver is directed to wait until a certain condition occurs
+ or the maximum time has elapsed before proceeding with executing the code.
+Explicit waits are used to halt the execution until the time a particular condition is met or 
+the maximum time has elapsed. 
+Unlike Implicit waits, Explicit waits are applied for a particular instance only.
+WebDriverWait wait = new WebDriverWait(driver,30);
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'COMPOSE')]")));
+An explicit wait always first defines a FluentWait, such as a WebDriverWait object and then usually uses an expected condition to resolve the wait.
+
+3. Fluent Wait looks for a web element repeatedly at regular intervals until timeout happens or until the object is found.
+//Declare and initialise a fluent wait
+ 
+// Waiting 30 seconds for an element to be present on the page, checking
+   // for its presence once every 5 seconds.
+   Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+       .withTimeout(Duration.ofSeconds(30L))
+       .pollingEvery(Duration.ofSeconds(5L))
+       .ignoring(NoSuchElementException.class);
+
+   WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
+     public WebElement apply(WebDriver driver) {
+       return driver.findElement(By.id("foo"));
+     }
+   });
+
+
+
+
+--> 3.Type of locators?
+The different locators in Selenium are as follows:
+By CSS ID: find_element_by_id.
+By CSS class name: find_element_by_class_name.
+By name attribute: find_element_by_name.
+By DOM structure or xpath: find_element_by_xpath.
+By link text: find_element_by_link_text.
+By partial link text: find_element_by_partial_link_text.
+By HTML tag name: find_element_by_tag_name
+While all these locators return single elements, one may use the .find_elements() method to find multiple elements.
+.find_elements()  returns list of elements; if no elements are found it returns null list...
+
+what i use is xpath...
+
+termonolgy: 
+1. Grand parent to exact child .. single slash... absolute path... /...
+peth related to identify webelement ...double slash.. relative path...
+
+
+--> What is IJavaScriptExecutor in Selenium?
+IJavaScriptExecutor is an interface provided by Selenium Webdriver, which presents a way to execute JavaScript from Webdriver.
+ This interface provides methods to run JavaScript on the selected window or the current page.
+ JavaScriptExecutor is an interface which is available for all the languages that support the Selenium uses.
+
+--> Filesupload in Selenium
+Files uploading in Selenium can be done with the below methods:
+1. Using sendKeys method
+2. Using AutoIT tool
+3. With the help of Robot Class
+
+Find element and use sendKeys method and click on submit button to upload file.
+WebElement upload_file = driver.findElement(By.xpath("//input[@id='file_up']"));
+upload_file.sendKeys("C:/Users/Sonali/Desktop/upload.png");
+path along with the file name in sendKeys so that the program is navigated to the mentioned path to fetch the file.
+After this, click on the save or submit button and the file will be seen uploaded. At times, we also receive a message that the file is being uploaded successfully.
+
+--> How to handle window popup alert
+
+driver.close vs driver.quit
+close() closes only the current window on which Selenium is running automated tests. 
+The WebDriver session, however, remains active. 
+On the other hand, the driver. quit() method closes all browser windows and ends the WebDriver session.
+
+TestFixture:
+In NUnit we have Test Fixtures containing Tests. A Test Fixture is the class that contain the tests we want to run. We typically write one test fixture for each class we want to test. As a convention we name the test fixture <Class to be tested>Tests.
+
+-->How to handle Alert in Selenium WebDriver
+Alert interface provides the below few methods which are widely used in Selenium Webdriver.
+
+1) void dismiss() // To click on the ‘Cancel’ button of the alert.
+
+driver.switchTo().alert().dismiss();
+2) void accept() // To click on the ‘OK’ button of the alert.
+
+driver.switchTo().alert().accept();
+3) String getText() // To capture the alert message.
+
+driver.switchTo().alert().getText();
+4) void sendKeys(String stringToSend) // To send some data to alert box. 
+driver.switchTo().alert().sendKeys("Text");
+
+How to handle web based alerts in Selenium?
+dismiss() This will cancel the button for alert.
+accept() This will accept the button for alert.
+getText() This will extract the text on alert.
+sendKeys() This will enter text on the alert box.
+
+specflow driven..API library resto...
+
+--> How to handle popups in Selenium
+In selenium webdriver, there are multiple methods to handle popups:
+
+1. Driver.getWindowHandles();
+
+In order to handle the opened windows by Selenium webdriver, you can use Driver.getWindowHandles() to 
+switch between the windows.
+
+2. Driver.getWindowHandle();
+
+When the webpage is loaded, you can handle the main window by using driver.getWindowHandle().
+It will handle the current window that uniquely identifies within the driver instance.
+
+-->Type of web driver excepions
+Handling Common Exceptions
+#1) org.openqa.selenium.NoSuchElementException
+#2) org.openqa.selenium.NoSuchWindowException
+#3) org.openqa.selenium.NoSuchFrameException
+#4) org.openqa.selenium.NoAlertPresentException
+#5) org.openqa.selenium.InvalidSelectorException
+#6) org.openqa.selenium.ElementNotVisibleException
+#7) org.openqa.selenium.ElementNotSelectableException
+#8) org.openqa.selenium.TimeoutException
+#9) org.openqa.selenium.NoSuchSessionException
+#10) org.openqa.selenium.StaleElementReferenceException
+
+
+element not interactable
+
+org.openqa.selenium.NoSuchElementException
+org.openqa.selenium.ElementNotVisibleException
+
+*** StaleElementReferenceException : element is no longer attached to webdriver.
+when web element goes to stale state, when dom refresh...
+A stale element reference exception is thrown in one of two cases, the first being more common than the second.
+
+The two reasons for Stale element reference are:
+1. The element has been deleted entirely.
+2. The element is no longer attached to the DOM. or expired
+We face this stale element reference exception when the element we are interacting is destroyed and then recreated again. When this happens the reference of the element in the DOM becomes stale. Hence we are not able to get the reference to the element.
+
+Some other exceptions we usually face are as follows:s
+WebDriverException
+IllegalStateException
+TimeoutException
+NoAlertPresentException
+NoSuchWindowException
+NoSuchElementException
+52. How to handle STAL
+
+
+what is Stale Element Reference Exception:
+Stale means old, decayed, no longer fresh. 
+Stale Element means an old element or no longer available element. 
+Assume there is an element that is found on a web page referenced as a WebElement in WebDriver. 
+If the DOM changes then the WebElement goes stale. If we try to interact with an element which is staled then the StaleElementReferenceException is thrown.
+
+What is Action Class in Selenium? example
+
+
+-->How we handle exceptions.
+The process of handling Exceptions is called Exception Handling.
+Exceptions need to be handled because they break the normal flow of execution of a program. One of the important intentions of exception handling is to prevent this break and continue program execution. Sometimes, you might want to perform some series of actions on occurring of a certain exception.
+When an exception occurs, an exception object is created which is technically referred to as ‘Throwing an Exception’ and we add Try/Catch blocks like,
+try {
+// Protected code 
+} catch (ExceptionName e) {
+// Catch block 
+
+
+
+
+
+--> How to input text in the text box using Selenium WebDriver?
+By using sendKeys() method
+driver.get("https://www.gmail.com");
+driver.findElement(By.xpath("xpath")).sendKeys("Software Testing Material Website");
+
+
+-->3How to input text in the text box without calling the sendKeys()?
+// To initialize js object
+JavascriptExecutor JS = (JavascriptExecutor)webdriver;
+// To enter username
+JS.executeScript("document.getElementById('User').value='SoftwareTestingMaterial.com'");
+// To enter password
+JS.executeScript("document.getElementById('Pass').value='tester'");
+
+
+-->How to clear the text in the text box using Selenium WebDriver?
+By using clear() method
+driver.findElement(By.xpath("xpath_of_element1")).clear();
+
+-->get a text of a web element?
+String availableText = driver.findElement(By.xpath("//*[@id='gbw']/div/div/div[1]/div[1]/a")).getText();
+
+
+--> get an attribute value using Selenium WebDriver?
+HTML
+<input name="nameSelenium" value="valueSelenium">SoftwareTestingMaterial</input>
+
+Selenium Code:
+String attributeValue = driver.findElement(By.name("nameSelenium")).getAttribute("value");
+System.out.println("Available attribute value is :"+attributeValue);
+Output: valueSelenium
+
+-->click on a hyperlink using Selenium WebDriver?
+driver.findElement(By.linkText(“Software Testing Material Website”)).click();
+
+--> submit a form using Selenium WebDriver?
+driver.findElement(By.id("form_1")).submit();
+
+-->press ENTER key on text box In Selenium WebDriver?
+driver.findElement(By.xpath("xpath")).sendKeys(Keys.ENTER);
+
+--> test execution for 5 seconds at a specific point?
+Thread.sleep(5000)
+
+
+-->
+driver.get(): To open an URL and it will wait till the whole page gets loaded
+driver.navigate.to(): To navigate to an URL and It will not wait till the whole page gets loaded
+
+
+-->navigate back and forth in a browser in Selenium WebDriver?
+We use Navigate interface to do navigate back and forth in a browser. It has methods to move back, forward as well as to refresh a page.
+
+driver.navigate().forward(); – to navigate to the next web page with reference to the browser’s history
+driver.navigate().back(); – takes back to the previous webpage with reference to the browser’s history
+driver.navigate().refresh(); – to refresh the current web page thereby reloading all the web elements
+driver.navigate().to(“url”); – to launch a new web browser window and navigate to the specified URL
+
+74.  fetch the current page URL in Selenium?
+driver.getCurrentUrl();
+
+--> maximize browser :driver.manage().window().maximize();
+--> delete cookies:driver.manage().deleteAllCookies();
+
+--> multiple ways to refresh a page in selenium
+Using driver.navigate().refresh() command as mentioned in the question 45
+Using driver.get(“URL”) on the current URL or using driver.getCurrentUrl()
+Using driver.navigate().to(“URL”) on the current URL or driver.navigate().to(driver.getCurrentUrl());
+Using sendKeys(Keys.F5) on any textbox on the webpage
+
+--> Take error sccreenshots
+Implement Screenshot of failed case at BasePage class -->  Execute method --> catch statement
+
+take snapshot and copy to location:
+public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
+//Convert web driver object to TakeScreenshot
+TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+//Call getScreenshotAs method to create image file
+File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+//Move image file to new destination
+File DestFile=new File(fileWithPath);
+//Copy file at destination
+FileUtils.copyFile(SrcFile, DestFile);
+}
+
+What is take screenshot in Selenium?
+To take a screenshot in Selenium, we use an interface called TakesScreenshot,
+ which enables the Selenium WebDriver to capture a screenshot and store it in different ways. 
+It has a got a method "getScreenshotAs() " which captures the screenshot and store it in the specified location.
+
+
+[TearDown] attribute method at base class is called everytime after executing test method; 
+[Setup] attribute method at base class is called before start execution of test methods.
+
+
+In case there are multiple windows, then the following code can help:
+
+//Get the current window handle
+String windowHandle = driver.getWindowHandle();
+
+//Get the list of window handles
+ArrayList tabs = new ArrayList (driver.getWindowHandles());
+System.out.println(tabs.size());
+//Use the list of window handles to switch between windows
+driver.switchTo().window(tabs.get(0));
+
+//Switch back to original window
+driver.switchTo().window(mainWindowHandle);
+
+It is possible to switch between individual tabs without having multiple browser instances.
+There is a difference how web driver handles different windows and how it handles different tabs.
+
+--> Selenium multiple tabs at once:
+Case 1:
+In case there are multiple windows, then the following code can help:
+
+//Get the current window handle
+String windowHandle = driver.getWindowHandle();
+
+//Get the list of window handles
+ArrayList tabs = new ArrayList (driver.getWindowHandles());
+System.out.println(tabs.size());
+//Use the list of window handles to switch between windows
+driver.switchTo().window(tabs.get(0));
+
+//Switch back to original window
+driver.switchTo().window(mainWindowHandle);
+
+Case 2:
+In case there are multiple tabs in the same window, then there is only one window handle. Hence switching between window handles keeps the control in the same tab.
+In this case using Ctrl + \t (Ctrl + Tab) to switch between tabs is more useful.
+
+//Open a new tab using Ctrl + t
+driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
+//Switch between tabs using Ctrl + \t
+driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"\t");
+
+
+--> Parallel execution of test methods
+MaxDegreeOfParallelism : no of browsers can be between 3 to 5; 
+
+        public static List<Object[]> testCaseToExecute = new List<object[]>();
+Dictionary<String, String> browserConfig = Utility.GetBrowserConfig(strBrowserId);
+                                    string iterationId = testDataNode.SelectSingleNode("TDID").InnerText;
+                                    
+                                    Iteration iterationReporter = new Iteration(iterationId, defectID);
+                                    iterationReporter.Browser = browserReporter;
+                                    browserReporter.Iterations.Add(iterationReporter);
+                                    //testCaseToExecute.Add(new Object[] { testCaseName,browserConfig, testCaseId, iterationId, iterationReporter, null, testDataNode, reportEngine });
+                                    testCaseToExecute.Add(new Object[] { testCaseReporter, browserConfig, testDataNode, iterationReporter, reportEngine });
+  Parallel.ForEach(testCaseToExecute,
+                                     new ParallelOptions { MaxDegreeOfParallelism = maxDegree },
+                                     work =>
+                                     {
+                                         ProcessEachWork(work);
+                                     });
+
+
+-->a wider array of tests using CI/CD automation.
+
+For example, companies can address the following types of tests:
+
+API testing
+Load testing
+UI testing
+Regression testing
+Unit and component testing
+Functional testing
+Nonfunctional testing
+Cross-browser testing
+
+-->What does a CI/CD Pipeline do?
+A CI/CD pipeline simply automates how software is delivered. In the pipeline, code is built and tests are run via continuous integration. Then, the automated process deploys the updated version of the code.
+
+-->What Does Continuous Integration Mean?
+Continuous integration combines work across multiple developers into a common mainline throughout a workday or cycle. This helps to avoid integration conflicts as the update branches never develop too far from the mainline codebase.
+Automated testing usually occurs at this point in the workflow. This ensures enhanced economical performance and improves early bug detection.
+
+-->What Does Continuous Delivery Mean?
+The continuous delivery approach requires that development teams edit code in shorter cycles. Not only can the code then be updated at any point, but it allows for a more streamlined build, test, and release workflow. 
+This also reduces overall costs and risks associated with any development projects.
+From bug fixes to feature updates, continuous delivery makes releasing changes for the production-end stage of development much less of an inconvenience.
+
+-->What’s the Difference Between Continuous Deployment and Continuous Delivery?
+These two aspects of the pipeline both occur after continuous integration which has a greater focus on testing. 
+Continuous delivery, in contrast, automatically pushes code changes to a development environment. This pairs automated testing with automated release for greater ease of analysis, bug fixes, and updating.
+Continuous deployment is a similar process as continuous delivery but operates with the production environment instead of a test environment. This stage in the pipeline relies on automated deployments without the need of human intervention. Any approved changes to the code get pushed to production right away.
+Both processes deliver something everyone needs
+
+-->What is the CI/CD Process?
+The process by which both continuous integration and continuous delivery happen is a multi-step workflow with a few elements involved. As mentioned, it involves updating the mainline several times a day with various updates across multiple developers or teams.
+involves five major categories: build, test, release, deploy, and validate. While these tasks can be addressed using specific tools, they can also be addressed by automated tool suites or one service alone.
+
+-->CI/CD integrations across tools such as:
+GitLab
+Jenkins
+Bamboo
+JetBrains
+And others
+
+-->per day automatable test cases
+(min 1 to max 12 depends on complexity)
+
+***16. DEfecttracking, test cases etc (tools used as azure devops only  either jira but tell like i didnt work on jira much)
+-->17. client reporting
+18. types of testing like smoke, regression, sanity(STLC must be read)
+19. How many no of test scripts in your project(400)
+20 execution time for 400 Test scripts(4 hrs-depends)
+21.ANY FAILED WILL BE RE EXECUTED.
+22.Donot know other tools execept postman ani chepu.
+23. API response codes(similar to dev questions la untai
+HTTP response status codes
+Informational responses ( 100 – 199 )
+Successful responses ( 200 – 299 )
+Redirection messages ( 300 – 399 )
+Client error responses ( 400 – 499 )
+Server error responses ( 500 – 599 )
+
+500 Server error:
+500 Internal Server Error:The server has encountered a situation it does not know how to handle.
+502 Bad Gatewaythe server, while acting as a gateway or proxy, received an invalid response from the upstream server.
+504 Gateway Timeout: the server, while acting as a gateway or proxy, did not get a response in time from the upstream server that it needed in order to complete the request.
+
+
+
+
+--> the Action class in Selenium provides appropriate methods to perform keyboard and mouse actions on the elements in the DOM.
+
+12. Why do you prefer Selenium Automation Tool?
+I prefer Selenium Automation Tool because some of the benefits of Selenium to do automation testing are
+
+Free and open source – It is a free open source tool. There is no need to allot budget for this tool
+Help – Have large user base and helping communities.
+Cross-browser compatibility – It works on almost all popular browsers such as Chrome, Firefox, Internet Explorer, and Safari.
+Cross Platform compatibility – It works on platforms such as Windows, Linux, Mac.
+Multiple programming languages – It supports programming languages such as Java, Phyton, Perl, Php, C#, Ruby, etc.,
+Parallel Execution – Selenium Grid supports parallel execution of Selenium Scripts.
+Continuous Integration – We can achieve nightly execution using Jenkins.
+
+
+14. What is Selenium IDE?
+Selenium IDE (Integrated Development Environment) is a Firefox plugin. It is the simplest framework in the Selenium Suite. It allows us to record and playback the scripts. Even though we can create scripts using Selenium IDE, we need to use Selenium RC or Selenium WebDriver to write more advanced and robust test cases.
+
+21. When do you use Selenium Grid?
+Selenium Grid can be used to execute same or different test scripts on multiple platforms and browsers concurrently so as to achieve distributed test execution
+
+20. What is Selenium Grid?
+Selenium Grid is a tool used together with Selenium RC to run tests on different machines against different browsers in parallel. That is, running multiple tests at the same time against different machines running different browsers and operating systems.
+
+In simple words, it is used to distribute your test execution on multiple platforms and environments concurrently.
+
+22. What are the advantages of Selenium Grid?
+It allows running test cases in parallel thereby saving test execution time.
+It allows multi-browser testing
+It allows us to execute test cases on multi-platform
+
+23. What is a hub in Selenium Grid?
+A hub is a server or a central point that controls the test executions on different machines.
+
+24. What is a node in Selenium Grid?
+Node is the machine which is attached to the hub. There can be multiple nodes in Selenium Grid.
+
+25. What are the types of WebDriver APIs available in Selenium?
+Firefox Driver
+Gecko Driver
+InternetExplorer Driver
+Chrome Driver
+HTMLUnit Driver
+Opera Driver
+Safari Driver
+Android Driver
+iPhone Driver
+EventFiringWebDriver
+
+26. Which WebDriver implementation claims to be the fastest?
+The fastest implementation of WebDriver is the HTMLUnitDriver. It is because the HTMLUnitDriver does not execute tests in the browser. Starting a browser and running test cases took more time compared to running the scripts without a browser. HTMLUnitDriver took a simple HTTP request-response mechanism for test case execution.
+
+27. What are the Programming Languages supported by Selenium WebDiver?
+Java
+C#
+Python
+Ruby
+Perl
+PHP
+Scala and Groovy.
+29. What are the Operating Systems supported by Selenium WebDriver?
+Windows
+Linux
+Mac OS X
+iOS
+Android
+
+30. What are the testing types that can be supported by selenium?
+Testing types that can be supported by Selenium are as follows:
+
+Functional Testing
+Regression Testing
+Retesting
+Acceptance Testing
+End-to-End Testing
+Smoke Testing
+Sanity Testing
+Responsive Testing
+Cross Browser Testing
+UI Testing
+Integration Testing
+
+31. How many parameters can selenium commands have at minimum?
+There are four parameters that you have to pass in Selenium are
+
+Host
+Port Number
+Browser
+URL
+
+32. What are the Open-source Frameworks supported by Selenium WebDriver?
+JUnit
+TestNG
+
+used: NUNIT
+
+
+
+41. What is the difference between Assert and Verify in Selenium?
+Assert: In simple words, if the assert condition is true then the program control will execute the next test step but if the condition is false, the execution will stop and further test step will not be executed.
+Verify: In simple words, there won’t be any halt in the test execution even though the verify condition is true or false.
+
+Soft Assert: Soft Assert collects errors during @Test Soft Assert does not throw an exception when an assert fails and would continue with the next step after the assert statement.
+Hard Assert: Hard Assert throws an AssertException immediately when an assert statement fails and test suite continues with next @Test
+
+
+ verification points--> 
+In Selenium WebDriver, there is no built-in features for verification points. It totally depends on our coding style. some of the Verification points are
+
+FirefoxDriver is a Java class, and it implements the WebDriver interface
+SearchContext acts as the super interface of Web Driver.
+
+
+
+Webdriver driver = new FirefoxDriver();
+-->WebDriver‘ is an interface and we are creating an object of type WebDriver instantiating an object of FirefoxDriver class.
+
+
+To check for page title
+To check for certain text
+To check for certain element (text box, button, drop down, etc.)
+
+
+
+8. What type of test cases not to be automated?
+Types of Test Cases Not To Be Automated are
+
+Subjective Validation
+New Functionalities
+Strategic Development
+User Experience
+Complex Functionality
+Quality Control
+Low return on investment
+Installation and setup testing
+
+-->
+driver.getWindowHandle() – It returns a handle of the current page (a unique identifier)
+driver.getWindowHandles() – It returns a set of handles of the all the pages available.
+
+-->Purpose of these two methods (driver.close and driver.quit) is almost same. Both allow us to close a browser but still, there is a difference.
+driver.close(): To close current WebDriver instance
+driver.quit(): To close all the opened WebDriver instances
+
+
+-->MaxInstances is the no. of browser instances of the same version of the browser that can run on the remote machine.
+MaxSession says how many browsers, independent of the type & version, can run in parallel on the remote machine.
+It supersedes the “MaxInstances” setting.
+
+
+--> Find whether an element is displayed on the web page
+-->isDisplayed()
+boolean elePresent = driver.findElement(By.xpath("xpath")).isDisplayed(); 
+isSelected()
+boolean eleSelected= driver.findElement(By.xpath("xpath")).isSelected(); 
+isEnabled()
+boolean eleEnabled= driver.findElement(By.xpath("xpath")).isEnabled(); 
+
+->select a value in a dropdown?
+By using Select class
+Select dropdown = new Select(mySelectElement);
+dropdown.selectByVisibleText(Text);
+dropdown.selectByIndex(Index);
+dropdown.selectByValue(Value);
+
+-->What are the types of annotations available in TestNG?
+@BeforeTest
+@AfterTest
+@BeforeClass
+@AfterClass
+@BeforeMethod
+@AfterMethod
+@BeforeSuite
+@AfterSuite
+@BeforeGroups
+@AfterGroups
+@Test
+
+
+126. How to create and run TestNG.xml? 
+In TestNG framework, we need to create TestNG XML file to create and handle multiple test classes. We do configure our test run, set test dependency, include or exclude any test, method, class or package and set priority etc in the XML file.
+
+-->Set test case priority in TestNG?
+We use priority attribute to the @Test annotations. In case priority is not set then the test scripts execute in alphabetical order.
+
+package TestNG;
+import org.testng.annotations.*;
+public class PriorityTestCase{
+	@Test(priority=0)
+	public void testCase1() {  
+		system.out.println("Test Case 1");
+	}
+	@Test(priority=1)
+	public void testCase2() { 	 
+		system.out.println("Test Case 2");
+	}
+}
+
+
+-->Parameterized tests allow developers to run the same test over and over again using different values.
+There are two ways to set these parameters:
+with testng.xml - Practical Example
+with Data Providers  – Practical Example
+
+-->handle browser (chrome) notifications in Selenium?
+options.addArguments("disable-infobars");
+WebDriver player = new ChromeDriver(options);
+
+--> Mention types of data you have handled in Selenium?
+Excel
+CSV
+XML
+JSON
+YAML
+SQL
+
+
+-->What is desired capabilities?
+In Selenium we use desired capabilities to handle SSL certificates in chrome browser
+
+We need to create an instance of DesiredCapabilities
+
+DesiredCapabilities desiredCapability = DesiredCapabilities.chrome();
+
+
+-->Have you used any crossbrowsertesting tool to run selenium scripts on cloud?
+I have used BrowserStack to run selenium tests on multiple browsers & Multiple operating systems in parallel. Earlier we have made a video on how to use BrowserStack to run selenium scripts on the cloud. Find the link in the description below.
+
+
+-->Perform Drag And Drop Action , Double Click Action, Right Click Action (Context Click) ,mouse hover   in Selenium WebDriver
+To achieve this, we use Actions class in Selenium WebDriver
+
+--> Scroll Web Page Down Or UP Using Selenium WebDriver?
+JavaScript scrollBy() method scrolls the document by the specified number of pixels.
+
+
+-->‘Dimension’ class to resize the browser window.
+
+--> we could switch between frames.
+driver.switchTo().frame();
+
+-->Download a file in Selenium WebDriver?
+By using AutoIT script, we could download a file in Selenium WebDriver
+
+
+-->upload a file in Selenium WebDriver such as using SendKeys Method and using AutoIT Script.
+
+--> Recovery Scenario in Selenium WebDriver?
+By using “Try Catch Block” within Selenium WebDriver Java tests.
+
+
+-->difference between Page Object Model (POM) and Page Factory?
+Page Object is a class that represents a web page and hold the functionality and members.
+Page Factory is a way to initialize the web elements you want to interact with within the page object when you create an instance of it.
+
+
+-->Page Object Model in Selenium?
+Page Object Model is a Design Pattern which has become popular in Selenium Test Automation. 
+It is widely used design pattern in Selenium for enhancing test maintenance and reducing code duplication. 
+Page object model (POM) can be used in any kind of framework such as modular, data-driven, keyword driven, hybrid framework etc.  
+A page object is an object-oriented class that serves as an interface to a page of your Application Under Test(AUT). 
+The tests then use the methods of this page object class whenever they need to interact with the User Interface (UI) of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within the page object needs to change. Subsequently, all changes to support that new UI is located in one place.
+
+-->Object Repository in Selenium WebDriver?
+Object Repository is used to store element locator values in a centralized location instead of hard coding them within the scripts. We do create a property file (.properties) to store all the element locators and these property files act as an object repository in Selenium WebDriver.
+
+
+->some scenarios which we cannot automate using Selenium WebDriver?
+1. Bitmap comparison is not possible using Selenium WebDriver
+2. Automating Captcha is not possible using Selenium WebDriver
+3. We can not read bar code using Selenium WebDriver
+
+--> Test data can efficiently be read from excel using JXL or POI API. POI API has many advantages than JXL.
+
+
+-->. Selenium automates web browsers. 
+Rest API & Web Services contains no UI. So we cannot automate using Selenium.
+
+
+-->handle hidden elements in Selenium WebDriver?
+We can handle hidden elements by using javaScript executor
+(JavascriptExecutor(driver)).executeScript("document.getElementsByClassName(ElementLocator).click();");
+
+
+--> We could handle windows based popups in Selenium using some third party tools such as AutoIT, Robot class etc.
+
+
+-->we handle Web-based Pop-ups or Alerts in Selenium?
+To handle Web-based alerts or popups, we need to do switch to the alert window and call Selenium WebDriver Alert API methods.
+
+dismiss(): To click on Cancel button.
+accept(): To Click on OK button.
+getText(): To get the text which is present on the Alert.
+sendKeys(): To enter the text into the alert box.
+QUIT
+
+
+
+-->capture Screenshot in Selenium WebDriver?
+Test cases may fail while executing the test scripts. While we are executing the test cases manually we just take a screenshot and place in a result repository. The same can be done by using Selenium WebDriver.
+
+Some of the scenarios we may need to capture a screenshot using Selenium WebDriver are
+
+i. Application issues
+ii. Assertion Failure
+iii. Difficulty to find Webelements on the web page
+iv. Timeout to find Webelements on the web page
+
+Selenium provides an interface called TakesScreenshot which has a method getScreenShotAs which can be used to take a screenshot of the application under test.
+In Selenium 3, we may face few issues while capturing Screenshots. To overcome we use aShot utility. Click on below links to see posts related to the normal way of capturing a screenshot and capturing a screenshot using aShot utility.
+
+
+
+-->read a JavaScript variable in Selenium WebDriver?
+By using JavascriptExecutor
+JavascriptExecutor JS = (JavascriptExecutor) webdriver;
+// To get the site title.
+String title = (String)JS.executeScript("return document.title");
+
+-->What is JavaScriptExecutor and in which cases JavaScriptExecutor will help in Selenium automation?
+In general, we click on an element using click() method in Selenium.
+
+For example:
+
+driver.findElement(By.id("Id Value")).click(); 
+Sometimes web controls don’t react well against selenium commands and we may face issues with the above statement (click()). To overcome such kind of situation, we use JavaScriptExecutor interface.
+
+It provides a mechanism to execute Javascript through Selenium driver. It provides “executescript” & “executeAsyncScript” methods, to run JavaScript in the context of the currently selected frame or window.
+
+There is no need to write a separate script to execute JavaScript within the browser using Selenium WebDriver script. Just we use predefined interface named ‘Java Script Executor’. We need to import the JavascriptExecutor package in the script.
+
+Package:
+
+import org.openqa.selenium.JavascriptExecutor; 
+
+JavascriptExecutor js = (JavascriptExecutor) driver;  
+js.executeScript(Script,Arguments); 
+js.executeScript(Script,Arguments);
+
+Script – The JavaScript to execute
+Arguments – The arguments to the script(Optional). May be empty.
+Returns – One of Boolean, Long, String, List, WebElement, or null.
+
+Let’s see some scenarios we could handle using this Interface:
+1. To type Text in Selenium WebDriver without using sendKeys() method
+2. To click a Button in Selenium WebDriver using JavaScript
+3. To handle Checkbox
+4. To generate Alert Pop window in selenium
+5. To refresh browser window using Javascript
+6. To get innertext of the entire webpage in Selenium
+7. To get the Title of our webpage
+8. To get the domain
+9. To get the URL of a webpage
+10. To perform Scroll on an application using  Selenium
+11. To click on a SubMenu which is only visible on mouse hover on Menu
+12. To navigate to different page using Javascript
+
+
+--> handle Ajax calls in Selenium WebDriver?
+Handling AJAX calls is one of the common issues when using Selenium WebDriver. We wouldn’t know when the AJAX call would get completed and the page has been updated. In this post, we see how to handle AJAX calls using Selenium.
+
+AJAX stands for Asynchronous JavaScript and XML. AJAX allows the web page to retrieve small amounts of data from the server without reloading the entire page. AJAX sends HTTP requests from the client to server and then process the server’s response without reloading the entire page. To handle AJAX controls, wait commands may not work. It’s just because the actual page is not going to refresh.
+
+When you click on a submit button, the required information may appear on the web page without refreshing the browser. Sometimes it may load in a second and sometimes it may take longer. We have no control over loading time. The best approach to handle this kind of situations in selenium is to use dynamic waits (i.e. WebDriverWait in combination with ExpectedCondition)
+
+Some of the methods which are available are as follows:
+1. titleIs() – The expected condition waits for a page with a specific title.
+wait.until(ExpectedConditions.titleIs(“Deal of the Day”)); 
+
+2. elementToBeClickable() – The expected condition waits for an element to be clickable i.e. it should be present/displayed/visible on the screen as well as enabled.
+wait.until(ExpectedConditions.elementToBeClickable(By.xpath("xpath"))); 
+
+3. alertIsPresent() – The expected condition waits for an alert box to appear.
+wait.until(ExpectedConditions.alertIsPresent()) !=null);
+
+4. textToBePresentInElement() – The expected condition waits for an element having a certain string pattern.
+wait.until(ExpectedConditions.textToBePresentInElement(By.id(“title’”), “text to be found”)); 
+
+******************************************
+Read XML file: 
+
+                            // Get the Test data details
+                            XmlDocument xmlTestDataDoc = new XmlDocument();
+                            xmlTestDataDoc.Load(strDllPath + "/TestData/" + testCaseModuleName + ".xml");
+                            //Load the defectID xml file
+                            XmlDocument defectIdDoc = new XmlDocument();
+                            defectIdDoc.Load(strDllPath + "/TestData/" + "DefectID" + ".xml");
+                            string defectID;
+                            //XmlNodeList testdataNodeList = xmlTestDataDoc.DocumentElement.SelectNodes("/TestData/" + testCaseName.Split(',')[0].Replace("BBI.Automation.Tests.", string.Empty));
+                            //XmlNodeList testdataNodeList = xmlTestDataDoc.DocumentElement.SelectNodes("/TestData/" + testCaseName.Replace("BBI.Automation.Tests", string.Empty));
+                            //XmlNodeList testdataNodeList = xmlTestDataDoc.DocumentElement.SelectNodes("/TestData/" + testCaseName);
+                            XmlNodeList testdataNodeList = null;
+                            XmlNode defectIDNode = null;
+
+                            int totalNodesFromSelectedFile = xmlTestDataDoc.DocumentElement.ChildNodes.Count;
+                            if (xmlTestDataDoc.DocumentElement.SelectNodes("/TestData/" + testCaseName).Count >= 1)
+                                testdataNodeList = xmlTestDataDoc.DocumentElement.SelectNodes("/TestData/" + testCaseName);
+                            else if (executionCategory.ToLower().Contains("sat"))
+                                testdataNodeList = xmlTestDataDoc.DocumentElement.SelectNodes("/TestData/SATGenericData");
+                            else
+                                testdataNodeList = xmlTestDataDoc.DocumentElement.SelectNodes("/TestData/GenericData");
+
+                            //Get the defect data node 
+                            if (defectIdDoc.DocumentElement.SelectNodes("/DefectData/" + testCaseName).Count >= 1)
+                            {
+                                defectIDNode = defectIdDoc.DocumentElement.SelectSingleNode("/DefectData/" + testCaseName);
+                                defectID = defectIDNode.SelectSingleNode("DefectID").InnerText;
+                            }
+                            else
+                                defectID = "";
+
+                            //Iterate for each data
+                            foreach (XmlNode testDataNode in testdataNodeList)
+                            {
+                                Dictionary<String, String> browserConfig = Utility.GetBrowserConfig(strBrowserId);
+                                string iterationId = testDataNode.SelectSingleNode("TDID").InnerText;
+                                // string defectID = testDataNode.SelectSingleNode("DefectID").InnerText;
+                                Iteration iterationReporter = new Iteration(iterationId, defectID);
+                                iterationReporter.Browser = browserReporter;
+                                browserReporter.Iterations.Add(iterationReporter);
+                                //testCaseToExecute.Add(new Object[] { testCaseName,browserConfig, testCaseId, iterationId, iterationReporter, null, testDataNode, reportEngine });
+                                testCaseToExecute.Add(new Object[] { testCaseReporter, browserConfig, testDataNode, iterationReporter, reportEngine });
+                            }
+
+***********************************************
+velocity
+
